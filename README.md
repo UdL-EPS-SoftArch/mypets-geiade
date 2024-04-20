@@ -2,8 +2,8 @@
 
 [![Open Issues](https://img.shields.io/github/issues-raw/UdL-EPS-SoftArch/mypets-geiade?logo=github)](https://github.com/orgs/UdL-EPS-SoftArch/projects/21)
 [![CI/CD](https://github.com/UdL-EPS-SoftArch/mypets-geiade/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/UdL-EPS-SoftArch/mypets-geiade/actions)
-[![CypressE2E](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/4isjgp&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/4isjgp/runs)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/bed54a5c-1e02-4083-aa58-5c226cf1bb38/deploy-status)](https://mypets-geiade.netlify.app)
+[![CypressE2E](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/y4sb1g&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/y4sb1g/runs)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/68b45a51-71cd-448a-85f5-60a496534533/deploy-status)](https://mypets-geiade.netlify.app)
 
 ## Development server
 
