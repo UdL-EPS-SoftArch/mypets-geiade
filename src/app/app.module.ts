@@ -24,6 +24,11 @@ import {AuthenticationBasicService} from './login-basic/authentication-basic.ser
 import {LoggedInGuard} from './login-basic/loggedin.guard';
 import {UserService} from './user/user.service';
 
+import {ScheduleService} from './schedule/schedule.service'
+import {ScheduleListComponent} from './schedule/schedule-list/schedule-list.component';
+import {ScheduleSearchComponent} from './schedule/schedule-search/schedule-search.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +40,9 @@ import {UserService} from './user/user.service';
     UserRegisterComponent,
     UserEditComponent,
     UserDeleteComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    ScheduleListComponent,
+    ScheduleSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +61,7 @@ import {UserService} from './user/user.service';
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
-    AuthenticationBasicService, LoggedInGuard, UserService
+    AuthenticationBasicService, LoggedInGuard, UserService, ScheduleService
   ],
   bootstrap: [AppComponent]
 })
