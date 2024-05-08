@@ -27,7 +27,7 @@ export class AdoptionsDeleteComponent implements OnInit {
   delete(): void {
     this.adoptionsService.deleteResource(this.adoptions).subscribe(
       () => {
-        this.router.navigate(['']);
+        this.router.navigate(['id']);
       });
   }
 }
