@@ -25,6 +25,7 @@ import {LoggedInGuard} from './login-basic/loggedin.guard';
 import {UserService} from './user/user.service';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {LocationListComponent} from "./location/location-list/location-list.component";
+import {LocationSearchComponent} from "./location/location-search/location-search.component";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {LocationListComponent} from "./location/location-list/location-list.comp
     UserEditComponent,
     UserDeleteComponent,
     UserSearchComponent,
-    LocationListComponent
+    LocationListComponent,
+    LocationSearchComponent
   ],
   imports: [
     BrowserModule,
