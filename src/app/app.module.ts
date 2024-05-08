@@ -24,6 +24,7 @@ import {AuthenticationBasicService} from './login-basic/authentication-basic.ser
 import {LoggedInGuard} from './login-basic/loggedin.guard';
 import {UserService} from './user/user.service';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {LocationListComponent} from "./location/location-list/location-list.component";
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     UserEditComponent,
     UserDeleteComponent,
     UserSearchComponent,
+    LocationListComponent
   ],
   imports: [
     BrowserModule,
