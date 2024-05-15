@@ -1,22 +1,24 @@
 <form id="adoptions-form" (ngSubmit)="onSubmit()" #form="ngForm">
   <fieldset>
 
-
-    <!-- id input -->
     <div class="form-group mb-3" [class.was-validated]="id.invalid && (id.dirty || id.touched)">
       <label class="control-label" for="id">Id</label>
       <input id="id" name="id" type="number" class="form-control"  [(ngModel)]="adoptions.id"
              #id="ngModel">
     </div>
 
-    <!-- starttime input -->
+    <div class="form-group mb-3">
+      <label class="control-label" for="pet">Pet</label>
+      <input id="pet" name="pet" type="text" class="form-control" [(ngModel)]="adoptions.pet"
+             #time="ngModel">
+    </div>
+
     <div class="form-group mb-3">
       <label class="control-label" for="time">Time</label>
       <input id="time" name="time" type="Date" class="form-control" [(ngModel)]="adoptions.localDateTime"
              #time="ngModel">
     </div>
 
-    <!-- Buttons -->
     <div class=" form-group fa-pull-right">
       <button id="listBtn" type="button" [routerLink]="['/adoptions']"
               class="btn btn-outline-primary pull-right">Back
