@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+<div class="card mb-1" *ngFor="let role of roles">
+  <div class="card-block row m-1 col-12">
+    <div class="card-body row align-items-center">
+      <div class="col-6 mt-1">
+        <h6 class="card-subtitle text-muted">Name</h6>
+        <a class="card-text" [routerLink]="['/roles', role.id]">{{role.name}}</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-</body>
-</html>
+<ngb-pagination class="d-flex justify-content-center"
+                [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalRoles"
+                (pageChange)="changePage()"></ngb-pagination>
