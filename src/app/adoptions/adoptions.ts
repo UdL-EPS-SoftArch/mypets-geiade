@@ -7,6 +7,7 @@ export class Adoptions extends Resource {
   id: string;
   pet: string;
   user: User;
+  uri: string;
 
 
 
