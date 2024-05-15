@@ -20,4 +20,20 @@ export class LocationService extends HateoasResourceOperation<Location> {
     return this.searchCollection('findLocationByAddressAndProvinceAndCityAndPostalCode', {params});
 
   }
+
+  public findById(id: string): Observable<ResourceCollection<Location>> {
+    return this.searchCollection("findById", { params: { id: id } })
+  }
+
+  public findByPostalCode(postalCode: string): Observable<ResourceCollection<Location>> {
+    return this.searchCollection("findByPostalCode", { params: { postalCode: postalCode } })
+  }
+
+  public findByAdress(adress: string): Observable<ResourceCollection<Location>> {
+    return this.searchCollection("findByAdress", { params: { adress: adress } })
+  }
+
 }
+
+
+

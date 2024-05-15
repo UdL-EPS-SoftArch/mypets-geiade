@@ -1,12 +1,13 @@
+
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { LocationService } from '../location.service';
-import { Location } from '../location';
 import { PagedResourceCollection } from '@lagoshny/ngx-hateoas-client';
+import {Location} from "../location";
 
 @Component({
-  selector: 'app-user-list',
-  templateUrl: './user-list.component.html'
+  selector: 'app-location-list',
+  templateUrl: './location-list.component.html'
 })
 export class LocationListComponent implements OnInit {
   public locations: Location[] = [];

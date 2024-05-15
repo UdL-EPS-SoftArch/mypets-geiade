@@ -23,9 +23,11 @@ import {HttpErrorInterceptor} from './error-handler/http-error-interceptor';
 import {AuthenticationBasicService} from './login-basic/authentication-basic.service';
 import {LoggedInGuard} from './login-basic/loggedin.guard';
 import {UserService} from './user/user.service';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import {LocationListComponent} from "./location/location-list/location-list.component";
-import {LocationSearchComponent} from "./location/location-search/location-search.component";
+
+import {LocationService} from './location/location.service'
+import {LocationListComponent} from './location/location-list/location-list.component';
+import {LocationSearchComponent} from './location/location-search/location-search.component';
+
 
 @NgModule({
   declarations: [
@@ -59,7 +61,7 @@ import {LocationSearchComponent} from "./location/location-search/location-searc
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
-    AuthenticationBasicService, LoggedInGuard, UserService, provideAnimationsAsync()
+    AuthenticationBasicService, LoggedInGuard, UserService, LocationService
   ],
   bootstrap: [AppComponent]
 })
