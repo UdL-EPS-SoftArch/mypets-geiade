@@ -6,16 +6,18 @@ import {ScheduleService} from '../schedule.service';
 import {PagedResourceCollection} from '@lagoshny/ngx-hateoas-client';
 import {HttpClient} from '@angular/common/http';
 import {environment} from "../../../environments/environment";
+import {DatePipe} from "@angular/common";
+import * as moment from 'moment';
+import 'moment-timezone';
 
 @Component({
   selector: 'app-schedules-create',
   templateUrl: './schedule-create.component.html',
-  //styleUrls: ['./schedule-create.component.css']
 })
 export class ScheduleCreateComponent implements OnInit {
 
   public schedule: Schedule = new Schedule();
-  public id: number;
+
   public startTime: Date;
   public endTime: Date;
   public shelter: string;
@@ -48,6 +50,11 @@ export class ScheduleCreateComponent implements OnInit {
   }
 
   onSubmit(): void {
+
+    const zonedDateTime = moment.tz(this.schedule.startTime.toString(), 'America/Los_Angeles')
+    this.schedule.startTime = zonedDateTime
+    const zonedDateTime2 = moment.tz(this.schedule.endTime.toString(), 'America/Los_Angeles')
+    this.schedule.endTime = zonedDateTime2
     this.scheduleService.createResource({ body: this.schedule }).subscribe(
       (schedule:Schedule) => this.router.navigate([schedule.uri]));
   }
