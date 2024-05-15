@@ -11,11 +11,21 @@
         <a class="nav-link" [routerLink]="['/about']">About</a>
       </li>
       <li class="nav-item" *ngIf="isRole('user')" ngbDropdown>
-        <a class="nav-link dropdown-toggle" id="playerDropdown" role="button"
+        <a class="nav-link dropdown-toggle" id="userDropdown" role="button"
            aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Users</a>
-        <div class="dropdown-menu" aria-labelledby="playDropdown" ngbDropdownMenu>
+        <div class="dropdown-menu" aria-labelledby="userDropdown" ngbDropdownMenu>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/users']"><span class="fas fa-user-circle"></span> List</a>
+        </div>
+      </li>
+      <li class="nav-item" *ngIf="isRole('user')" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="roleDropdown" role="button"
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Roles</a>
+        <div class="dropdown-menu" aria-labelledby="roleDropdown" ngbDropdownMenu>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/role']"><span class="fas fa-user-circle"></span> List</a>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/role/create']"><span class="fas fa-user-circle"></span> Create</a>
         </div>
       </li>
     </ul>
