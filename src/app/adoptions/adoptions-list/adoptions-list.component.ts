@@ -13,7 +13,6 @@ export class AdoptionsListComponent implements OnInit{
   public pageSize = 5;
   public page = 1;
   public totalAdoptions = 0;
-  @Output() emitResults = new EventEmitter<Adoptions>();
 
   constructor(
     public router: Router,
