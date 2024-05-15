@@ -18,7 +18,7 @@ export class RoleCreateComponent implements OnInit {
     public role: Role;
     public roleNameInput: string = '';
     public roleForm: FormGroup;
-
+    showSuccessMessage: boolean = false;
     constructor(
         private router: Router,
         private roleService: RoleService,
@@ -86,5 +86,10 @@ export class RoleCreateComponent implements OnInit {
                 const uri = (role as any).uri;
                 this.router.navigate([uri]).then();
             });
+      this.showSuccessMessage = true;
     }
+  closeSuccessMessage(): void {
+    // Oculta el mensaje de éxito cuando se hace clic en el botón de cierre
+    this.showSuccessMessage = false;
+  }
 }
