@@ -1,19 +1,31 @@
-
+<app-location-search (emitResults)="detail($event)"></app-location-search>
 
 <div class="card mb-1" *ngFor="let location of locations">
   <div class="card-block row m-1 col-12">
     <div class="card-body row align-items-center">
       <div class="col-6 mt-1">
-        <h6 class="card-subtitle text-muted">Id</h6>
+        <h6 class="card-subtitle text-muted">Location ID</h6>
         <a class="card-text" [routerLink]="['/locations', location.id]">{{location.id}}</a>
+      </div>
+      <div class="col-6 mt-1">
+        <h6 class="card-subtitle text-muted">City</h6>
+        <p class="card-text">{{location["city"]}}</p>
+      </div>
+      <div class="col-6 mt-1">
+        <h6 class="card-subtitle text-muted">PostalCode</h6>
+        <p class="card-text">{{location["postalCode"]}}</p>
       </div>
       <div class="col-6 mt-1">
         <h6 class="card-subtitle text-muted">Address</h6>
         <p class="card-text">{{location.address}}</p>
       </div>
+      <div class="col-6 mt-1">
+        <h6 class="card-subtitle text-muted">Province</h6>
+        <p class="card-text">{{location["province"]}}</p>
+      </div>
     </div>
-  </div>
 </div>
+
 
 <ngb-pagination class="d-flex justify-content-center"
                 [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalLocations"
