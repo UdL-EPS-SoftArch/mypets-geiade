@@ -27,6 +27,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {ShelterService} from "./shelter/shelter.service";
 import {ShelterListComponent} from "./shelter/shelter-list/shelter-list.component";
 import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
+import {ShelterDetailComponent} from "./shelter/shelter-detail/shelter-detail.component";
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.co
     UserDeleteComponent,
     UserSearchComponent,
     ShelterListComponent,
-    ShelterCreateComponent
+    ShelterCreateComponent,
+    ShelterDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -39,7 +39,24 @@
         />
       </div>
       <div class="form-error" *ngIf="email.errors?.['invalidName']">
-        Invalid name.
+        Invalid email.
+      </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <label class="control-label" for="mobile">Mobile</label>
+      <div class="mobile-input">
+        <input
+          id="mobile"
+          name="mobile"
+          formControlName="mobile"
+          type="text"
+          class="form-control"
+          [(ngModel)]="shelter.mobile"
+        />
+      </div>
+      <div class="form-error" *ngIf="mobile.errors?.['invalidName']">
+        Invalid mobile.
       </div>
     </div>
 

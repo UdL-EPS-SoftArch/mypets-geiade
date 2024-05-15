@@ -1,0 +1,45 @@
+<div class="card mb-4">
+  <div class="card-block">
+    <h4 class="card-title col-md-12 p-3">Shelter {{ shelterDetail.id }}</h4>
+    <div class="card-body row m-1">
+      <div class="col-md-4 p-3">
+        <h6 class="card-subtitle text-muted">Name</h6>
+        <p id="Name" class="card-text">
+          {{ shelterDetail.name }}
+        </p>
+      </div>
+      <div class="col-md-4 p-3">
+        <h6 class="card-subtitle text-muted">Email</h6>
+        <p id="commonName" class="card-text">{{ shelterDetail.email }}</p>
+      </div>
+      <div class="card-footer text-right jumbotron">
+        <button
+          id="listBtn"
+          type="button"
+          [routerLink]="['/shelters']"
+          class="btn m-1 btn-outline-primary"
+        >
+          Shelters List
+        </button>
+        <button
+          id="editBtn"
+          type="button"
+          [routerLink]="['edit']"
+          *ngIf="isRole('admin')"
+          class="btn m-1 btn-outline-success"
+        >
+          Edit
+        </button>
+        <button
+          id="deleteBtn"
+          type="button"
+          *ngIf="isRole('admin')"
+          [routerLink]="['delete']"
+          class="btn m-1 btn-outline-danger"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,14 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {User} from "../../login-basic/user";
 import {Router} from "@angular/router";
-import {Location} from "@angular/common";
-import {UserService} from "../../user/user.service";
-import {AuthenticationBasicService} from "../../login-basic/authentication-basic.service";
 import {ShelterService} from "../shelter.service";
 import {Shelter} from "../shelter";
 import {AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators} from "@angular/forms";
 import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {PagedResourceCollection} from "@lagoshny/ngx-hateoas-client";
+import {formatDate} from "@angular/common";
 
 @Component({
   selector: 'app-shelter-create',
@@ -39,6 +36,10 @@ export class ShelterCreateComponent implements OnInit{
       email: new FormControl(this.shelter.email, [
         Validators.required,
         this.emailValidator(),
+      ]),
+      mobile: new FormControl(this.shelter.mobile, [
+        Validators.required,
+        this.mobileValidator(),
       ]),
     });
     this.loadShelterList();
@@ -92,6 +93,15 @@ export class ShelterCreateComponent implements OnInit{
     };
   }
 
+  mobileValidator(): ValidatorFn {
+    const nameRe: RegExp = /^$|[0-9]{11}/;
+    return (control: AbstractControl): ValidationErrors | null => {
+      const invalid = !nameRe.test(control.value);
+      return invalid ? { invalidName: { value: control.value } } : null;
+    };
+
+  }
+
   get name() {
     return this.shelterForm.get('name');
   }
@@ -100,7 +110,13 @@ export class ShelterCreateComponent implements OnInit{
     return this.shelterForm.get('email');
   }
 
+  get mobile() {
+    return this.shelterForm.get('mobile');
+  }
+
   onSubmit(): void {
+    this.shelter.createdAt = new Date();
+    this.shelter.updatedAt = new Date();
     this.shelterService
       .createResource({ body: this.shelter })
       .subscribe((shelter: Shelter) => {
