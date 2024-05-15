@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { Router } from '@angular/router';
 import { Adoptions } from '../adoptions';
 import { AdoptionsService } from '../adoptions.service';
@@ -13,6 +13,7 @@ export class AdoptionsListComponent implements OnInit{
   public pageSize = 5;
   public page = 1;
   public totalAdoptions = 0;
+  @Output() emitResults = new EventEmitter<Adoptions>();
 
   constructor(
     public router: Router,

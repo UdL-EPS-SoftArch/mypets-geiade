@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full'},
-  { path: 'adoptions', component: AdoptionsListComponent },
+  { path: 'adoptions/list' , component: AdoptionsListComponent },
   { path: 'adoptions/create', component: AdoptionsAddComponent },
   { path: 'adoptions/edit', component: AdoptionsEditComponent },
   { path: 'adoptions/delete', component: AdoptionsDeleteComponent },
