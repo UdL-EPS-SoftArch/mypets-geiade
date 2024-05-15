@@ -18,7 +18,7 @@ export class ShelterDetailComponent implements OnInit{
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.shelterService.getResource(id).subscribe((shelter) => {
+    this.shelterService.getResource(id).subscribe((shelter: Shelter) => {
       this.shelterDetail = shelter;
     });
   }

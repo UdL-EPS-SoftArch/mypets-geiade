@@ -120,6 +120,7 @@ export class ShelterCreateComponent implements OnInit{
     this.shelterService
       .createResource({ body: this.shelter })
       .subscribe((shelter: Shelter) => {
+        console.log(shelter);
         const uri = (shelter as any).uri;
         this.router.navigate([uri]).then();
       });

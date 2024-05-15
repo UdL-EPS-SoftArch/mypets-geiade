@@ -25,18 +25,18 @@
           id="editBtn"
           type="button"
           [routerLink]="['edit']"
-          *ngIf="isRole('admin')"
           class="btn m-1 btn-outline-success"
         >
+          <!--          *ngIf="isRole('admin')"-->
           Edit
         </button>
         <button
           id="deleteBtn"
           type="button"
-          *ngIf="isRole('admin')"
           [routerLink]="['delete']"
           class="btn m-1 btn-outline-danger"
         >
+<!--          *ngIf="isRole('admin')"-->
           Delete
         </button>
       </div>
