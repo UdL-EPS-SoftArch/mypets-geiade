@@ -27,6 +27,7 @@ import {UserService} from './user/user.service';
 import {ScheduleService} from './schedule/schedule.service'
 import {ScheduleListComponent} from './schedule/schedule-list/schedule-list.component';
 import {ScheduleSearchComponent} from './schedule/schedule-search/schedule-search.component';
+import {ScheduleCreateComponent} from "./schedule/schedule-create/schedule-create.component";
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import {ScheduleSearchComponent} from './schedule/schedule-search/schedule-searc
     UserDeleteComponent,
     UserSearchComponent,
     ScheduleListComponent,
-    ScheduleSearchComponent
+    ScheduleSearchComponent,
+    ScheduleCreateComponent
   ],
   imports: [
     BrowserModule,

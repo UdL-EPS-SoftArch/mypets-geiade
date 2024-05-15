@@ -28,7 +28,7 @@ export class ScheduleListComponent implements OnInit {
   }
 
   changePage(): void {
-    this.scheduleService.getPage({ pageParams: { page: this.page - 1, size: this.pageSize }, sort: { username: 'ASC' } }).subscribe(
+    this.scheduleService.getPage({ pageParams: { page: this.page - 1, size: this.pageSize }, sort: { id: 'ASC' } }).subscribe(
       (page: PagedResourceCollection<Schedule>) => this.schedules = page.resources);
   }
 
