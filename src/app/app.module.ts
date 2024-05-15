@@ -25,6 +25,7 @@ import {LoggedInGuard} from './login-basic/loggedin.guard';
 import {UserService} from './user/user.service';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {RoleListComponent} from './role/role-list/role-list.component';
+import {RoleCreateComponent} from './role/role-create/role-create.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {RoleListComponent} from './role/role-list/role-list.component';
     UserEditComponent,
     UserDeleteComponent,
     UserSearchComponent,
-    RoleListComponent
+    RoleListComponent,
+    RoleCreateComponent,
   ],
   imports: [
     BrowserModule,
