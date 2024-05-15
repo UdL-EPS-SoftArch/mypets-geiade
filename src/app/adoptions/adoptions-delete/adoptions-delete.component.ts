@@ -5,9 +5,7 @@ import { AdoptionsService } from '../adoptions.service';
 
 @Component({
   selector: 'app-adoptions-delete',
-  templateUrl: './adoptions.add.component.html',
-  standalone: true,
-  imports: []
+  templateUrl: './adoptions.add.component.html'
 })
 export class AdoptionsDeleteComponent implements OnInit {
   public adoptions: Adoptions = new Adoptions();

@@ -8,8 +8,6 @@ import { Adoptions } from '../adoptions';
 @Component({
   selector: 'app-adoptions-edit',
   templateUrl: './adoptions-edit.component.html',
-  standalone: true,
-  imports: []
 })
 export class AdoptionsEditComponent implements OnInit {
   public adoptions: Adoptions = new Adoptions();

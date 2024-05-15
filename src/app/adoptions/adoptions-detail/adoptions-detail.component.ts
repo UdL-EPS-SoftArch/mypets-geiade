@@ -5,9 +5,7 @@ import { Adoptions } from '../adoptions';
 
 @Component({
   selector: 'app-adoptions-detail',
-  templateUrl: './adoptions-detail.component.html',
-  standalone: true,
-  imports: []
+  templateUrl: './adoptions-detail.component.html'
 })
 export class AdoptionsDetailComponent implements OnInit {
   public adoptions: Adoptions = new Adoptions();

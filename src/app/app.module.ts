@@ -23,6 +23,12 @@ import {HttpErrorInterceptor} from './error-handler/http-error-interceptor';
 import {AuthenticationBasicService} from './login-basic/authentication-basic.service';
 import {LoggedInGuard} from './login-basic/loggedin.guard';
 import {UserService} from './user/user.service';
+import {AdoptionsSearchComponent} from './adoptions/adoptions-search/adoptions-search.component';
+import {AdoptionsListComponent} from './adoptions/adoptions-list/adoptions-list.component';
+import {AdoptionsEditComponent} from './adoptions/adoptions-edit/adoptions-edit.component';
+import {AdoptionsDetailComponent} from './adoptions/adoptions-detail/adoptions-detail.component';
+import {AdoptionsDeleteComponent} from './adoptions/adoptions-delete/adoptions-delete.component';
+import {AdoptionsAddComponent} from "./adoptions/adoptions-add/adoptions-add.component";
 
 @NgModule({
   declarations: [
@@ -35,7 +41,13 @@ import {UserService} from './user/user.service';
     UserRegisterComponent,
     UserEditComponent,
     UserDeleteComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    AdoptionsSearchComponent,
+    AdoptionsAddComponent,
+    AdoptionsDeleteComponent,
+    AdoptionsDetailComponent,
+    AdoptionsEditComponent,
+    AdoptionsListComponent
   ],
   imports: [
     BrowserModule,

@@ -6,10 +6,8 @@ import { catchError, debounceTime, distinctUntilChanged, map, switchMap, tap } f
 import { ResourceCollection } from '@lagoshny/ngx-hateoas-client';
 
 @Component({
-  selector: 'app-propagator-search',
-  templateUrl: './propagator-search.component.html',
-  standalone: true,
-  imports: []
+  selector: 'app-adoptions-search',
+  templateUrl: './adoptions-search.component.html'
 })
 
 export class AdoptionsSearchComponent {

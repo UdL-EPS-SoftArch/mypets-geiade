@@ -6,8 +6,6 @@ import { PagedResourceCollection } from '@lagoshny/ngx-hateoas-client';
 
 @Component({
   selector: 'app-adoptions-list',
-  standalone: true,
-  imports: [],
   templateUrl: './adoptions-list.component.html'
 })
 export class AdoptionsListComponent implements OnInit{

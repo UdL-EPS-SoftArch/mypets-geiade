@@ -8,6 +8,13 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
+import {AdoptionsSearchComponent} from './adoptions/adoptions-search/adoptions-search.component';
+import {AdoptionsListComponent} from './adoptions/adoptions-list/adoptions-list.component';
+import {AdoptionsEditComponent} from './adoptions/adoptions-edit/adoptions-edit.component';
+import {AdoptionsDetailComponent} from './adoptions/adoptions-detail/adoptions-detail.component';
+import {AdoptionsDeleteComponent} from './adoptions/adoptions-delete/adoptions-delete.component';
+import {AdoptionsAddComponent} from "./adoptions/adoptions-add/adoptions-add.component";
+
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -18,6 +25,12 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full'},
+  { path: 'adoptions', component: AdoptionsListComponent },
+  { path: 'adoptions/create', component: AdoptionsAddComponent },
+  { path: 'adoptions/edit', component: AdoptionsEditComponent },
+  { path: 'adoptions/delete', component: AdoptionsDeleteComponent },
+  { path: 'adoptions/detail', component: AdoptionsDetailComponent },
+  { path: 'adoptions/search', component: AdoptionsSearchComponent }
 ];
 
 @NgModule({
