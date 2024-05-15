@@ -8,7 +8,7 @@ import { UserService } from 'src/app/user/user.service';
 
 @Component({
   selector: 'app-adoptions-add',
-  templateUrl: './take-add.component.html',
+  templateUrl: './adoptions-add.component.html',
 })
 export class AdoptionsAddComponent implements OnInit{
   public adoptions: Adoptions;
