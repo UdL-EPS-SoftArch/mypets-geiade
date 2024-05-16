@@ -29,6 +29,7 @@ import {AdoptionEditComponent} from './adoptions/adoption-edit/adoption-edit.com
 import {AdoptionDetailComponent} from './adoptions/adoption-detail/adoption-detail.component';
 import {AdoptionDeleteComponent} from './adoptions/adoption-delete/adoption-delete.component';
 import {AdoptionCreateComponent} from "./adoptions/adoption-create/adoption-create.component";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,7 @@ import {AdoptionCreateComponent} from "./adoptions/adoption-create/adoption-crea
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
-    AuthenticationBasicService, LoggedInGuard, UserService
+    AuthenticationBasicService, LoggedInGuard, UserService, provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
