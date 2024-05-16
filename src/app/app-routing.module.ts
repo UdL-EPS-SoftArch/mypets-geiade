@@ -10,6 +10,7 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import {ScheduleListComponent} from "./schedule/schedule-list/schedule-list.component";
 import {ScheduleCreateComponent} from "./schedule/schedule-create/schedule-create.component";
+import {ScheduleDetailComponent} from "./schedule/schedule-detail/schedule-detail.component";
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'users', component: UserListComponent, canActivate: [LoggedInGuard]},
   { path: 'schedules', component: ScheduleListComponent, canActivate: [LoggedInGuard]},
   { path: 'schedules/create', component: ScheduleCreateComponent, canActivate: [LoggedInGuard]},
+  { path: 'schedules/:id', component: ScheduleDetailComponent, canActivate: [LoggedInGuard]},
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full'},

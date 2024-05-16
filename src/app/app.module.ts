@@ -28,6 +28,7 @@ import {ScheduleService} from './schedule/schedule.service'
 import {ScheduleListComponent} from './schedule/schedule-list/schedule-list.component';
 import {ScheduleSearchComponent} from './schedule/schedule-search/schedule-search.component';
 import {ScheduleCreateComponent} from "./schedule/schedule-create/schedule-create.component";
+import {ScheduleDetailComponent} from "./schedule/schedule-detail/schedule-detail.component";
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import {ScheduleCreateComponent} from "./schedule/schedule-create/schedule-creat
     UserSearchComponent,
     ScheduleListComponent,
     ScheduleSearchComponent,
-    ScheduleCreateComponent
+    ScheduleCreateComponent,
+    ScheduleDetailComponent
   ],
   imports: [
     BrowserModule,

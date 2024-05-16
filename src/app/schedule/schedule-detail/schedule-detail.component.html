@@ -1,0 +1,26 @@
+<div class="card mb-4">
+  <div class="card-block">
+    <h4 class="card-title col-md-12 p-3">{{schedule.id}}</h4>
+    <div class="card-body row m-1">
+      <div class="col-md-4 p-3">
+        <h6 class="card-subtitle text-muted">StartTime</h6>
+        <p class="card-text">{{schedule.startTime}}</p>
+      </div>
+      <div class="col-md-4 p-3">
+        <h6 class="card-subtitle text-muted">EndTime</h6>
+        <p class="card-text">{{schedule.endTime}}</p>
+      </div>
+    </div>
+    <div class="card-footer text-right">
+      <button id="listBtn" type="button" [routerLink]="['/schedules']"
+              class="btn m-1 btn-outline-primary">Schedule List
+      </button>
+      <!-- <button id="editBtn" type="button" *ngIf="getCurrentUser().username === user.username" [routerLink]="['edit']"
+              class="btn m-1 btn-outline-success">Edit
+      </button>
+      <button id="deleteBtn" type="button" *ngIf="getCurrentUser().username === user.username" [routerLink]="['delete']"
+              class="btn m-1 btn-outline-danger">Delete
+      </button> -->
+    </div>
+  </div>
+</div>

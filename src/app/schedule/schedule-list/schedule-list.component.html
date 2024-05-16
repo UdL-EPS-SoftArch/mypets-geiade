@@ -8,8 +8,10 @@
         <a class="card-text" [routerLink]="['/schedules', schedule.id]">{{schedule.id}}</a>
       </div>
       <div class="col-6 mt-1">
-        <h6 class="card-subtitle text-muted">StarTime</h6>
+        <h6 class="card-subtitle text-muted">StartTime</h6>
         <p class="card-text">{{schedule.startTime}}</p>
+        <h6 class="card-subtitle text-muted">EndTime</h6>
+        <p class="card-text">{{schedule.endTime}}</p>
       </div>
     </div>
   </div>
