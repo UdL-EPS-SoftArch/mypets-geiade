@@ -24,15 +24,11 @@ export class ShelterCertificateCreateComponent implements OnInit {
   }
 
   onSubmit(): void {
-    // const payload = {
-    //   ...this.shelterCertificate,
-    //   expirationDate: new Date(this.shelterCertificate.expirationDate).toISOString()
-    // };
-
+    this.shelterCertificate.expirationDate = new Date(this.shelterCertificate.expirationDate);
     this.shelterCertificateService.createResource({ body: this.shelterCertificate }).subscribe(
       (shelterCertificate: ShelterCertificate) => {
-        console.log("CREATED!!")
-        this.router.navigate(['shelter-certificate', shelterCertificate.id]);
+        const uri = (shelterCertificate as any).uri;
+        this.router.navigate([uri]).then();
       }
     )
   }
