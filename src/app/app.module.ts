@@ -24,6 +24,12 @@ import {AuthenticationBasicService} from './login-basic/authentication-basic.ser
 import {LoggedInGuard} from './login-basic/loggedin.guard';
 import {UserService} from './user/user.service';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {
+  ShelterCertificateListComponent
+} from "./shelter-certificate/shelter-certificate-list/shelter-certificate-list.component";
+import {
+  ShelterCertificateCreateComponent
+} from "./shelter-certificate/shelter-certificate-create/shelter-certificate-create.component";
 
 @NgModule({
   declarations: [
@@ -37,6 +43,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     UserEditComponent,
     UserDeleteComponent,
     UserSearchComponent,
+    ShelterCertificateListComponent,
+    ShelterCertificateCreateComponent
   ],
   imports: [
     BrowserModule,

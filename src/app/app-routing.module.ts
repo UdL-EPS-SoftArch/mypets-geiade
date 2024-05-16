@@ -9,6 +9,12 @@ import { UserRegisterComponent } from './user/user-register/user-register.compon
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import { ShelterListComponent } from './shelter/shelter-list/shelter-list.component'
+import {
+  ShelterCertificateListComponent
+} from "./shelter-certificate/shelter-certificate-list/shelter-certificate-list.component";
+import {
+  ShelterCertificateCreateComponent
+} from "./shelter-certificate/shelter-certificate-create/shelter-certificate-create.component";
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -20,6 +26,9 @@ const routes: Routes = [
   { path: '404', component: NotFoundComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full'},
   { path: 'shelters', component: ShelterListComponent},
+
+  { path: 'shelter-certificate', component: ShelterCertificateListComponent},
+  { path: 'shelter-certificate/create', component: ShelterCertificateCreateComponent},
 ];
 
 @NgModule({
