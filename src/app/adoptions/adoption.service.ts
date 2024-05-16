@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { HateoasResourceOperation, ResourceCollection } from '@lagoshny/ngx-hateoas-client';
-import { Adoptions } from "./adoptions"
+import { Adoption } from "./adoption"
 
 @Injectable({providedIn: 'root'})
-export class AdoptionsService extends HateoasResourceOperation<Adoptions> {
+export class AdoptionService extends HateoasResourceOperation<Adoption> {
 
   constructor() {
-    super(Adoptions);
+    super(Adoption);
   }
 
-  public findById(query: string): Observable<ResourceCollection<Adoptions>> {
+  public findById(query: string): Observable<ResourceCollection<Adoption>> {
     return this.searchCollection('findById', { params: { text: query } });
   }
 }

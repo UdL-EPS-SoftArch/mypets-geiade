@@ -23,12 +23,12 @@ import {HttpErrorInterceptor} from './error-handler/http-error-interceptor';
 import {AuthenticationBasicService} from './login-basic/authentication-basic.service';
 import {LoggedInGuard} from './login-basic/loggedin.guard';
 import {UserService} from './user/user.service';
-import {AdoptionsSearchComponent} from './adoptions/adoptions-search/adoptions-search.component';
-import {AdoptionsListComponent} from './adoptions/adoptions-list/adoptions-list.component';
-import {AdoptionsEditComponent} from './adoptions/adoptions-edit/adoptions-edit.component';
-import {AdoptionsDetailComponent} from './adoptions/adoptions-detail/adoptions-detail.component';
-import {AdoptionsDeleteComponent} from './adoptions/adoptions-delete/adoptions-delete.component';
-import {AdoptionsAddComponent} from "./adoptions/adoptions-add/adoptions-add.component";
+import {AdoptionSearchComponent} from './adoptions/adoption-search/adoption-search.component';
+import {AdoptionListComponent} from './adoptions/adoption-list/adoption-list.component';
+import {AdoptionEditComponent} from './adoptions/adoption-edit/adoption-edit.component';
+import {AdoptionDetailComponent} from './adoptions/adoption-detail/adoption-detail.component';
+import {AdoptionDeleteComponent} from './adoptions/adoption-delete/adoption-delete.component';
+import {AdoptionCreateComponent} from "./adoptions/adoption-create/adoption-create.component";
 
 @NgModule({
   declarations: [
@@ -42,12 +42,12 @@ import {AdoptionsAddComponent} from "./adoptions/adoptions-add/adoptions-add.com
     UserEditComponent,
     UserDeleteComponent,
     UserSearchComponent,
-    AdoptionsSearchComponent,
-    AdoptionsAddComponent,
-    AdoptionsDeleteComponent,
-    AdoptionsDetailComponent,
-    AdoptionsEditComponent,
-    AdoptionsListComponent
+    AdoptionSearchComponent,
+    AdoptionCreateComponent,
+    AdoptionDeleteComponent,
+    AdoptionDetailComponent,
+    AdoptionEditComponent,
+    AdoptionListComponent
   ],
   imports: [
     BrowserModule,

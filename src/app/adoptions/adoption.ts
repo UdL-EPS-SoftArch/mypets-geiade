@@ -2,7 +2,7 @@ import { HateoasResource, Resource } from '@lagoshny/ngx-hateoas-client';
 import {User} from "../login-basic/user";
 
 @HateoasResource('adoptions')
-export class Adoptions extends Resource {
+export class Adoption extends Resource {
   localDateTime: Date;
   id: string;
   pet: string;

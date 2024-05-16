@@ -3,19 +3,19 @@
 
     <div class="form-group mb-3" [class.was-validated]="id.invalid && (id.dirty || id.touched)">
       <label class="control-label" for="id">Id</label>
-      <input id="id" name="id" type="number" class="form-control"  [(ngModel)]="adoptions.id"
+      <input id="id" name="id" type="number" class="form-control"  [(ngModel)]="adoption.id"
              #id="ngModel">
     </div>
 
     <div class="form-group mb-3">
       <label class="control-label" for="pet">Pet</label>
-      <input id="pet" name="pet" type="text" class="form-control" [(ngModel)]="adoptions.pet"
+      <input id="pet" name="pet" type="text" class="form-control" [(ngModel)]="adoption.pet"
              #time="ngModel">
     </div>
 
     <div class="form-group mb-3">
       <label class="control-label" for="time">Time</label>
-      <input id="time" name="time" type="Date" class="form-control" [(ngModel)]="adoptions.localDateTime"
+      <input id="time" name="time" type="Date" class="form-control" [(ngModel)]="adoption.localDateTime"
              #time="ngModel">
     </div>
 

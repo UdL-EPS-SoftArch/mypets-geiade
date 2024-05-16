@@ -8,12 +8,12 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
-import {AdoptionsSearchComponent} from './adoptions/adoptions-search/adoptions-search.component';
-import {AdoptionsListComponent} from './adoptions/adoptions-list/adoptions-list.component';
-import {AdoptionsEditComponent} from './adoptions/adoptions-edit/adoptions-edit.component';
-import {AdoptionsDetailComponent} from './adoptions/adoptions-detail/adoptions-detail.component';
-import {AdoptionsDeleteComponent} from './adoptions/adoptions-delete/adoptions-delete.component';
-import {AdoptionsAddComponent} from "./adoptions/adoptions-add/adoptions-add.component";
+import {AdoptionSearchComponent} from './adoptions/adoption-search/adoption-search.component';
+import {AdoptionListComponent} from './adoptions/adoption-list/adoption-list.component';
+import {AdoptionEditComponent} from './adoptions/adoption-edit/adoption-edit.component';
+import {AdoptionDetailComponent} from './adoptions/adoption-detail/adoption-detail.component';
+import {AdoptionDeleteComponent} from './adoptions/adoption-delete/adoption-delete.component';
+import {AdoptionCreateComponent} from "./adoptions/adoption-create/adoption-create.component";
 
 
 const routes: Routes = [
@@ -25,12 +25,12 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full'},
-  { path: 'adoptions/list' , component: AdoptionsListComponent },
-  { path: 'adoptions/create', component: AdoptionsAddComponent },
-  { path: 'adoptions/edit', component: AdoptionsEditComponent },
-  { path: 'adoptions/delete', component: AdoptionsDeleteComponent },
-  { path: 'adoptions/detail', component: AdoptionsDetailComponent },
-  { path: 'adoptions/search', component: AdoptionsSearchComponent }
+  { path: 'adoptions' , component: AdoptionListComponent },
+  { path: 'adoptions/create', component: AdoptionCreateComponent },
+  { path: 'adoptions/edit', component: AdoptionEditComponent },
+  { path: 'adoptions/delete', component: AdoptionDeleteComponent },
+  { path: 'adoptions/detail', component: AdoptionDetailComponent },
+  { path: 'adoptions/search', component: AdoptionSearchComponent }
 ];
 
 @NgModule({

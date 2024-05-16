@@ -1,31 +1,31 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { AdoptionsService } from '../adoptions.service';
-import { Adoptions } from '../adoptions';
+import { AdoptionService } from '../adoption.service';
+import { Adoption } from '../adoption';
 import { Observable, of, OperatorFunction } from 'rxjs';
 import { catchError, debounceTime, distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators';
 import { ResourceCollection } from '@lagoshny/ngx-hateoas-client';
 
 @Component({
-  selector: 'app-adoptions-search',
-  templateUrl: './adoptions-search.component.html'
+  selector: 'app-adoption-search',
+  templateUrl: './adoption-search.component.html'
 })
 
-export class AdoptionsSearchComponent {
-  @Output() emitResults: EventEmitter<Adoptions> = new EventEmitter();
+export class AdoptionSearchComponent {
+  @Output() emitResults: EventEmitter<Adoption> = new EventEmitter();
   searchFailed = false;
   searching = false;
 
-  constructor(private AdoptionsService: AdoptionsService) {
+  constructor(private AdoptionService: AdoptionService) {
   }
 
-  autocomplete: OperatorFunction<string, readonly Adoptions[]> = (text$: Observable<string>) =>
+  autocomplete: OperatorFunction<string, readonly Adoption[]> = (text$: Observable<string>) =>
     text$.pipe(
       debounceTime(500),
       distinctUntilChanged(),
       tap(() => this.searching = true),
       switchMap(term => term.length < 3 ? of([]) :
-        this.AdoptionsService.findById(term).pipe(
-          map((collection: ResourceCollection<Adoptions>) => collection.resources),
+        this.AdoptionService.findById(term).pipe(
+          map((collection: ResourceCollection<Adoption>) => collection.resources),
           tap(() => this.searchFailed = false),
           catchError(() => {
             this.searchFailed = true;
@@ -37,6 +37,6 @@ export class AdoptionsSearchComponent {
     )
 
   select(item: any): void {
-    this.emitResults.emit(item as Adoptions);
+    this.emitResults.emit(item as Adoption);
   }
 }
