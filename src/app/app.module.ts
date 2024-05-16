@@ -24,6 +24,10 @@ import {AuthenticationBasicService} from './login-basic/authentication-basic.ser
 import {LoggedInGuard} from './login-basic/loggedin.guard';
 import {UserService} from './user/user.service';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {ShelterService} from "./shelter/shelter.service";
+import {ShelterListComponent} from "./shelter/shelter-list/shelter-list.component";
+import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
+import {ShelterDetailComponent} from "./shelter/shelter-detail/shelter-detail.component";
 
 @NgModule({
   declarations: [
@@ -37,6 +41,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     UserEditComponent,
     UserDeleteComponent,
     UserSearchComponent,
+    ShelterListComponent,
+    ShelterCreateComponent,
+    ShelterDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -50,12 +57,12 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     LoginBasicModule,
     ErrorHandlerModule,
     NgbModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
-    AuthenticationBasicService, LoggedInGuard, UserService, provideAnimationsAsync()
+    AuthenticationBasicService, LoggedInGuard, UserService, ShelterService, provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
