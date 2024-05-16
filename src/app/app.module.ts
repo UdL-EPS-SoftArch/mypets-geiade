@@ -27,7 +27,7 @@ import {UserService} from './user/user.service';
 import {LocationService} from './location/location.service'
 import {LocationListComponent} from './location/location-list/location-list.component';
 import {LocationSearchComponent} from './location/location-search/location-search.component';
-
+import {LocationCreateComponent} from "./location/location-create/location-create.component";
 
 @NgModule({
   declarations: [
@@ -42,7 +42,8 @@ import {LocationSearchComponent} from './location/location-search/location-searc
     UserDeleteComponent,
     UserSearchComponent,
     LocationListComponent,
-    LocationSearchComponent
+    LocationSearchComponent,
+    LocationCreateComponent
   ],
   imports: [
     BrowserModule,
