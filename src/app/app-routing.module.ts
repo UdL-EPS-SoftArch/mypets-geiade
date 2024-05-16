@@ -15,6 +15,12 @@ import {
 import {
   ShelterCertificateCreateComponent
 } from "./shelter-certificate/shelter-certificate-create/shelter-certificate-create.component";
+import {
+  ShelterCertificateDetailComponent
+} from "./shelter-certificate/shelter-certificate-detail/shelter-certificate-detail.component";
+import {
+  ShelterCertificateDeleteComponent
+} from "./shelter-certificate/shelter-certificate-delete/shelter-certificate-delete.component";
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -29,6 +35,9 @@ const routes: Routes = [
 
   { path: 'shelter-certificate', component: ShelterCertificateListComponent},
   { path: 'shelter-certificate/create', component: ShelterCertificateCreateComponent},
+  { path: 'shelter-certificate/:id', component: ShelterCertificateDetailComponent},
+  { path: 'shelter-certificate/:id/delete', component: ShelterCertificateDeleteComponent},
+
 ];
 
 @NgModule({

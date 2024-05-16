@@ -12,8 +12,6 @@ export class ShelterCertificate extends Resource {
   }
 
   public get id(): string {
-    console.log(this)
-    console.log(this.uri)
     let uriArray = this.uri.split('/');
     return uriArray.pop();
   }

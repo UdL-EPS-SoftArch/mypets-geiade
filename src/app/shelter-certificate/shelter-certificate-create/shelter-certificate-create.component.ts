@@ -7,7 +7,7 @@ import {ShelterCertificateService} from "../shelter-certificate.service";
 import {ShelterCertificate} from "../shelter-certificate";
 
 @Component({
-  selector: 'app-user-register',
+  selector: 'app-shelter-certificate-create',
   templateUrl: './shelter-certificate-create.component.html'
 })
 export class ShelterCertificateCreateComponent implements OnInit {
@@ -15,8 +15,7 @@ export class ShelterCertificateCreateComponent implements OnInit {
 
   constructor(private router: Router,
               private location: Location,
-              private shelterCertificateService: ShelterCertificateService,
-              private authenticationBasicService: AuthenticationBasicService) {
+              private shelterCertificateService: ShelterCertificateService) {
   }
 
   ngOnInit(): void {
@@ -28,7 +27,7 @@ export class ShelterCertificateCreateComponent implements OnInit {
     this.shelterCertificateService.createResource({ body: this.shelterCertificate }).subscribe(
       (shelterCertificate: ShelterCertificate) => {
         const uri = (shelterCertificate as any).uri;
-        this.router.navigate([uri]).then();
+        this.router.navigate(['/shelter-certificate', shelterCertificate.id]).then()
       }
     )
   }

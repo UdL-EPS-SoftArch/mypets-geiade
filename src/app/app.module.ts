@@ -30,6 +30,12 @@ import {
 import {
   ShelterCertificateCreateComponent
 } from "./shelter-certificate/shelter-certificate-create/shelter-certificate-create.component";
+import {
+  ShelterCertificateDetailComponent
+} from "./shelter-certificate/shelter-certificate-detail/shelter-certificate-detail.component";
+import {
+  ShelterCertificateDeleteComponent
+} from "./shelter-certificate/shelter-certificate-delete/shelter-certificate-delete.component";
 
 @NgModule({
   declarations: [
@@ -44,7 +50,9 @@ import {
     UserDeleteComponent,
     UserSearchComponent,
     ShelterCertificateListComponent,
-    ShelterCertificateCreateComponent
+    ShelterCertificateCreateComponent,
+    ShelterCertificateDetailComponent,
+    ShelterCertificateDeleteComponent
   ],
   imports: [
     BrowserModule,

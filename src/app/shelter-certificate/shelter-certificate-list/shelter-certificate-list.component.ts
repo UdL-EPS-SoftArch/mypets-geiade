@@ -1,7 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ShelterCertificateService } from '../shelter-certificate.service';
-import { User } from '../../login-basic/user';
 import { PagedResourceCollection } from '@lagoshny/ngx-hateoas-client';
 import {ShelterCertificate} from "../shelter-certificate";
 
@@ -21,7 +20,7 @@ export class ShelterCertificateListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.shelterCertificateService.getPage({ pageParams:  { size: this.pageSize }, sort: { username: 'ASC' } }).subscribe(
+    this.shelterCertificateService.getPage({ pageParams:  { size: this.pageSize }, sort: { id: 'ASC' } }).subscribe(
         (page: PagedResourceCollection<ShelterCertificate>) => {
           this.shelterCertificates = page.resources;
           this.totalShelterCertificates = page.totalElements;
@@ -29,7 +28,7 @@ export class ShelterCertificateListComponent implements OnInit {
   }
 
   changePage(): void {
-    this.shelterCertificateService.getPage({ pageParams: { page: this.page - 1, size: this.pageSize }, sort: { username: 'ASC' } }).subscribe(
+    this.shelterCertificateService.getPage({ pageParams: { page: this.page - 1, size: this.pageSize }, sort: { id: 'ASC' } }).subscribe(
       (page: PagedResourceCollection<ShelterCertificate>) => this.shelterCertificates = page.resources);
   }
 
