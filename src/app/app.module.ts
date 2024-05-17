@@ -23,6 +23,11 @@ import {HttpErrorInterceptor} from './error-handler/http-error-interceptor';
 import {AuthenticationBasicService} from './login-basic/authentication-basic.service';
 import {LoggedInGuard} from './login-basic/loggedin.guard';
 import {UserService} from './user/user.service';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {ShelterService} from "./shelter/shelter.service";
+import {ShelterListComponent} from "./shelter/shelter-list/shelter-list.component";
+import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
+import {ShelterDetailComponent} from "./shelter/shelter-detail/shelter-detail.component";
 
 import {ScheduleService} from './schedule/schedule.service'
 import {ScheduleListComponent} from './schedule/schedule-list/schedule-list.component';
@@ -47,6 +52,10 @@ import {ScheduleDetailComponent} from "./schedule/schedule-detail/schedule-detai
     ScheduleSearchComponent,
     ScheduleCreateComponent,
     ScheduleDetailComponent
+    ShelterListComponent,
+    ShelterCreateComponent,
+    ShelterDetailComponent
+
   ],
   imports: [
     BrowserModule,
@@ -60,12 +69,12 @@ import {ScheduleDetailComponent} from "./schedule/schedule-detail/schedule-detai
     LoginBasicModule,
     ErrorHandlerModule,
     NgbModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
-    AuthenticationBasicService, LoggedInGuard, UserService, ScheduleService
+    AuthenticationBasicService, LoggedInGuard, UserService, ScheduleService, ShelterService, provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
