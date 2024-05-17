@@ -51,11 +51,10 @@ import {ScheduleDetailComponent} from "./schedule/schedule-detail/schedule-detai
     ScheduleListComponent,
     ScheduleSearchComponent,
     ScheduleCreateComponent,
-    ScheduleDetailComponent
+    ScheduleDetailComponent,
     ShelterListComponent,
     ShelterCreateComponent,
     ShelterDetailComponent
-
   ],
   imports: [
     BrowserModule,
