@@ -26,6 +26,14 @@
              [routerLink]="['/role']"><span class="fas fa-user-circle"></span> List</a>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/role/create']"><span class="fas fa-user-circle"></span> Create</a>
+          <a class="nav-link dropdown-toggle" id="shelterDropdown" role="button"
+             aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Shelters</a>
+        </div>
+        <div class="dropdown-menu" aria-labelledby="playDropdown" ngbDropdownMenu>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/shelters']"><span class="fas fa-user-circle"></span> List</a>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/shelters/create']"><span class="fas fa-user-circle"></span> Create</a>
         </div>
       </li>
     </ul>

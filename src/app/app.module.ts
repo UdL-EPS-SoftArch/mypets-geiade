@@ -28,6 +28,10 @@ import {RoleListComponent} from './role/role-list/role-list.component';
 import {RoleCreateComponent} from './role/role-create/role-create.component';
 import {RoleDeleteComponent} from "./role/role-delete/role-delete.component";
 import {RoleDetailComponent} from "./role/role-detail/role-detail.component";
+import {ShelterService} from "./shelter/shelter.service";
+import {ShelterListComponent} from "./shelter/shelter-list/shelter-list.component";
+import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
+import {ShelterDetailComponent} from "./shelter/shelter-detail/shelter-detail.component";
 
 @NgModule({
   declarations: [
@@ -45,6 +49,9 @@ import {RoleDetailComponent} from "./role/role-detail/role-detail.component";
     RoleCreateComponent,
     RoleDeleteComponent,
     RoleDetailComponent,
+    ShelterListComponent,
+    ShelterCreateComponent,
+    ShelterDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -58,12 +65,12 @@ import {RoleDetailComponent} from "./role/role-detail/role-detail.component";
     LoginBasicModule,
     ErrorHandlerModule,
     NgbModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
-    AuthenticationBasicService, LoggedInGuard, UserService, provideAnimationsAsync()
+    AuthenticationBasicService, LoggedInGuard, UserService, ShelterService, provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

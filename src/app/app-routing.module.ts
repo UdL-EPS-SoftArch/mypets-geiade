@@ -13,6 +13,7 @@ import {RoleListComponent} from "./role/role-list/role-list.component";
 import {RoleCreateComponent} from "./role/role-create/role-create.component"
 import {RoleDeleteComponent} from "./role/role-delete/role-delete.component";
 import {RoleDetailComponent} from "./role/role-detail/role-detail.component";
+import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path: 'role/create', component:RoleCreateComponent},
   {path:'role/:id/delete', component:RoleDeleteComponent},
   {path:'role/:id', component:RoleDetailComponent},
+  { path: 'shelters/create', component: ShelterCreateComponent},
 ];
 
 @NgModule({
