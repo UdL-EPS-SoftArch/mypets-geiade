@@ -1,0 +1,19 @@
+<div class="card mb-1" *ngFor="let dog of dogs">
+    <div class="card-block row m-1 col-12">
+      <div class="card-body row align-items-center">
+        <div class="col-6 mt-1">
+          <h6 class="card-subtitle text-muted">Name</h6>
+          <a class="card-text" [routerLink]="['/dogs', dog.id]">{{dog.name}}</a>
+        </div>
+        <div class="col-6 mt-1">
+          <h6 class="card-subtitle text-muted">Chip</h6>
+          <p class="card-text">{{dog.chip}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <ngb-pagination class="d-flex justify-content-center"
+                  [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalDogs"
+                  (pageChange)="changePage()"></ngb-pagination>
+  
