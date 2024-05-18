@@ -1,13 +1,51 @@
+<div class="w-full d-flex" style="font-size: xx-large;">
+  <i class="fa fa-paw me-3"></i>
+  <p class="mt-2">Dogs</p>
+</div>
+<div class="d-flex w-full justify-content-end mb-3">
+  <app-dog-search (emitResults)="detail($event)"></app-dog-search>
+  <button
+        id="createDog"
+        type="button"
+        [routerLink]="['/dogs/create']"
+        class="btn btn-success ms-3"
+      >
+        <i class="fa fa-plus-circle me-2"></i>
+        Create
+  </button>
+</div>
 <div class="card mb-1" *ngFor="let dog of dogs">
     <div class="card-block row m-1 col-12">
       <div class="card-body row align-items-center">
-        <div class="col-6 mt-1">
-          <h6 class="card-subtitle text-muted">Name</h6>
-          <a class="card-text" [routerLink]="['/dogs', dog.id]">{{dog.name}}</a>
-        </div>
-        <div class="col-6 mt-1">
+        <div class="col-3 mt-1">
           <h6 class="card-subtitle text-muted">Chip</h6>
           <p class="card-text">{{dog.chip}}</p>
+        </div>
+        <div class="col-3 mt-1">
+          <h6 class="card-subtitle text-muted">Name</h6>
+          <p class="card-text">{{dog.name}}</p>
+        </div>
+        <div class="col-3 mt-1">
+          <h6 class="card-subtitle text-muted">Date of birth</h6>
+          <p class="card-text">{{dog.dateOfBirth}}</p>
+        </div>
+        <div class="col-3 mt-1 d-flex justify-content-end">
+          <button
+            id="seeDog"
+            type="button"
+            [routerLink]="['/dogs', dog.id]"
+            class="btn btn-primary ms-3"
+          >
+            <i class="fa fa-eye"></i>
+          </button>
+          <button
+            id="seeDog"
+            type="button"
+            [routerLink]="['/dogs/' + dog.id + '/edit']"
+            class="btn btn-secondary ms-3"
+          >
+            <i class="fa fa-pencil"></i>
+          </button>
         </div>
       </div>
     </div>

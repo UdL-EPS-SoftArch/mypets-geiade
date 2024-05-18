@@ -41,4 +41,9 @@ export class DogListComponent implements OnInit {
         (page: PagedResourceCollection<Dog>) => (this.dogs = page.resources)
       );
   }
+
+  detail(dog: Dog): void {
+    this.router.navigate(['/dogs', dog.id]);
+  }
+
 }

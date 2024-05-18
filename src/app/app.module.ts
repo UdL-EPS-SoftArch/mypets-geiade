@@ -29,7 +29,6 @@ import {ShelterListComponent} from "./shelter/shelter-list/shelter-list.componen
 import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
 import {ShelterDetailComponent} from "./shelter/shelter-detail/shelter-detail.component";
 import { CatListComponent } from './pet/cat/cat-list/cat-list.component';
-import { DogListComponent } from './pet/dog/dog-list/dog-list.component';
 import { CatService } from './pet/cat/cat.service';
 import { DogService } from './pet/dog/dog.service';
 import { CatCreateComponent } from './pet/cat/cat-create/cat-create.component';
@@ -37,6 +36,12 @@ import { CatDetailComponent } from './pet/cat/cat-detail/cat-detail.component';
 import { CatEditComponent } from './pet/cat/cat-edit/cat-edit.component';
 import { CatDeleteComponent } from './pet/cat/cat-delete/cat-delete.component';
 import { CatSearchComponent } from './pet/cat/cat-search/cat-search.component';
+import { DogListComponent } from './pet/dog/dog-list/dog-list.component';
+import { DogCreateComponent } from './pet/dog/dog-create/dog-create.component';
+import { DogDetailComponent } from './pet/dog/dog-detail/dog-detail.component';
+import { DogDeleteComponent } from './pet/dog/dog-delete/dog-delete.component';
+import { DogEditComponent } from './pet/dog/dog-edit/dog-edit.component';
+import { DogSearchComponent } from './pet/dog/dog-search/dog-search.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +65,11 @@ import { CatSearchComponent } from './pet/cat/cat-search/cat-search.component';
     CatEditComponent,
     CatSearchComponent,
     DogListComponent,
+    DogCreateComponent,
+    DogDetailComponent,
+    DogDeleteComponent,
+    DogEditComponent,
+    DogSearchComponent,
   ],
   imports: [
     BrowserModule,

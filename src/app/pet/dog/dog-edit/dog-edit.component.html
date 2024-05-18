@@ -1,0 +1,198 @@
+<form
+  id="dog-form"
+  (ngSubmit)="onSubmit()"
+  #form="ngForm"
+  [formGroup]="dogForm"
+>
+  <fieldset>
+    <div class="row">
+      <div class="form-group mb-3 col-6">
+        <label class="control-label required-label" for="name">Name</label>
+          <input
+            id="name"
+            name="name"
+            formControlName="name"
+            type="text"
+            class="form-control"
+            [(ngModel)]="dog.name"
+          />
+        <div class="form-error" *ngIf="name.errors?.['required']">
+          Name is required
+        </div>
+      </div>
+
+      <div class="form-group mb-3 col-6">
+        <label class="control-label required-label" for="chip">Chip</label>
+          <input
+            id="chip"
+            name="chip"
+            formControlName="chip"
+            type="text"
+            class="form-control"
+            [(ngModel)]="dog.chip"
+          />
+        <div class="form-error" *ngIf="chip.errors?.['required']">
+          Chip is required
+        </div>
+      </div>
+
+      <div class="form-group mb-3 col-6">
+        <label class="control-label required-label" for="dateOfBirth">Date of birth</label>
+          <input
+            id="dateOfBirth"
+            name="dateOfBirth"
+            formControlName="dateOfBirth"
+            type="date"
+            class="form-control"
+            [(ngModel)]="dog.dateOfBirth"
+          />
+        <div class="form-error" *ngIf="dateOfBirth.errors?.['required']">
+          Date of birth is required
+        </div>
+        <div
+          class="form-error"
+          *ngIf="dateOfBirth.errors?.['invalidDate'] && !dateOfBirth.errors?.['required']"
+        >
+          Invalid date
+        </div>
+      </div>
+
+      <div class="form-group mb-3 col-6">
+        <label class="control-label required-label" for="colour">Colour</label>
+          <input
+            id="colour"
+            name="colour"
+            formControlName="colour"
+            type="color"
+            class="form-control"
+            [(ngModel)]="dog.colour"
+          />
+        <div class="form-error" *ngIf="colour.errors?.['required']">
+          Colour is required
+        </div>
+        <div
+          class="form-error"
+          *ngIf="colour.errors?.['invalidColour'] && !colour.errors?.['required']"
+        >
+          Invalid date
+        </div>
+      </div>
+
+      <div class="form-group mb-3 col-6">
+        <label class="control-label required-label" for="size">Size</label>
+          <select
+            id="size"
+            name="size"
+            formControlName="size"
+            class="form-control"
+            [(ngModel)]="dog.size"
+          >
+          <option value="1">Small</option>
+          <option value="2">Average</option>
+          <option value="3">Large</option>
+          <option value="4">Extra Large</option>
+        </select>
+        <div class="form-error" *ngIf="size.errors?.['required']">
+          Size is required
+        </div>
+        <div
+          class="form-error"
+          *ngIf="size.errors?.['invalidNumber'] && !size.errors?.['required']"
+        >
+          Size is invalid
+        </div>
+      </div>
+
+      <div class="form-group mb-3 col-6">
+        <label class="control-label required-label" for="sex">Sex</label>
+          <select
+            id="sex"
+            name="sex"
+            formControlName="sex"
+            class="form-control"
+            [(ngModel)]="dog.sex"
+          >
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <div class="form-error" *ngIf="sex.errors?.['required']">
+          Sex is required
+        </div>
+        <div
+          class="form-error"
+          *ngIf="sex.errors?.['invalidSex'] && !sex.errors?.['required']"
+        >
+          Sex is invalid
+        </div>
+      </div>
+
+      <div class="form-group mb-3 col-6">
+        <label class="control-label required-label" for="name">Race</label>
+          <input
+            id="race"
+            name="race"
+            formControlName="race"
+            type="text"
+            class="form-control"
+            [(ngModel)]="dog.race"
+          />
+        <div class="form-error" *ngIf="race.errors?.['required']">
+          Race is required
+        </div>
+      </div>
+
+      <div class="form-group mb-3 col-6">
+        <label class="control-label required-label" for="dangerous">Dangerous</label>
+          <input
+            id="dangerous"
+            name="dangerous"
+            formControlName="dangerous"
+            type="checkbox"
+            clasS="ms-3"
+            [(ngModel)]="dog.dangerous"
+          />
+      </div>
+
+      <div class="form-group mb-3 col-6">
+        <label class="control-label required-label" for="barkingLevel">Barking Level</label>
+        <select
+          id="barkingLevel"
+          name="barkingLevel"
+          formControlName="barkingLevel"
+          class="form-control"
+          [(ngModel)]="dog.barkingLevel"
+        >
+          <option value="1">No barking</option>
+          <option value="2">Low barking</option>
+          <option value="3">Average barking</option>
+          <option value="4">Loud barking</option>
+        </select>
+        <div class="form-error" *ngIf="barkingLevel.errors?.['required']">
+          Barking level is required
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Save and back buttons -->
+    <div class="form-group fa-pull-right mt-3">
+      <button
+        id="listBtn"
+        type="button"
+        [routerLink]="['..']"
+        class="btn btn-outline-primary pull-right"
+      >
+        Back
+      </button>
+      <button
+        id="submit"
+        type="submit"
+        [disabled]="!form.form.valid"
+        class="btn btn-success ms-3"
+      >
+        <i class="fa fa-floppy-disk me-2"></i>
+        Edit
+      </button>
+    </div>
+  </fieldset>
+</form>
