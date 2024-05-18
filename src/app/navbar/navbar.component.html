@@ -28,6 +28,18 @@
              [routerLink]="['/shelters/create']"><span class="fas fa-user-circle"></span> Create</a>
         </div>
       </li>
+      <li class="nav-item" *ngIf="isRole('user')" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="petsDropdown" role="button"
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Pets</a>
+        <div class="dropdown-menu" aria-labelledby="petsDropdown" ngbDropdownMenu>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/dogs']"><span class="fas fa-paw"></span> Dogs</a>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/cats']"><span class="fas fa-heart"></span> Cats</a>
+        </div>
+      </li>
+      
+
     </ul>
     <ul class="navbar-nav ms-auto me-3" app-login-navbar></ul>
   </div>
