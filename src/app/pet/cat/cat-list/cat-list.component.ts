@@ -41,4 +41,9 @@ export class CatListComponent implements OnInit {
         (page: PagedResourceCollection<Cat>) => (this.cats = page.resources)
       );
   }
+
+  detail(cat: Cat): void {
+    this.router.navigate(['/cats', cat.id]);
+  }
+
 }

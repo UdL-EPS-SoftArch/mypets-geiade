@@ -36,6 +36,7 @@ import { CatCreateComponent } from './pet/cat/cat-create/cat-create.component';
 import { CatDetailComponent } from './pet/cat/cat-detail/cat-detail.component';
 import { CatEditComponent } from './pet/cat/cat-edit/cat-edit.component';
 import { CatDeleteComponent } from './pet/cat/cat-delete/cat-delete.component';
+import { CatSearchComponent } from './pet/cat/cat-search/cat-search.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { CatDeleteComponent } from './pet/cat/cat-delete/cat-delete.component';
     CatDetailComponent,
     CatDeleteComponent,
     CatEditComponent,
+    CatSearchComponent,
     DogListComponent,
   ],
   imports: [

@@ -3,6 +3,7 @@
   <p class="mt-2">Cats</p>
 </div>
 <div class="d-flex w-full justify-content-end mb-3">
+  <app-cat-search (emitResults)="detail($event)"></app-cat-search>
   <button
         id="createCat"
         type="button"
