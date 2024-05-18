@@ -13,6 +13,7 @@ import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.co
 import { CatListComponent } from './pet/cat/cat-list/cat-list.component';
 import { DogListComponent } from './pet/dog/dog-list/dog-list.component';
 import { CatCreateComponent } from './pet/cat/cat-create/cat-create.component';
+import { CatDetailComponent } from './pet/cat/cat-detail/cat-detail.component';
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -25,9 +26,10 @@ const routes: Routes = [
   { path: '', redirectTo: 'about', pathMatch: 'full'},
   { path: 'shelters', component: ShelterListComponent},
   { path: 'shelters/create', component: ShelterCreateComponent},
-  { path: 'cats', component: CatListComponent},
-  { path: 'cats/create', component: CatCreateComponent},
-  { path: 'dogs', component: DogListComponent},
+  { path: 'cats', component: CatListComponent, canActivate: [LoggedInGuard]},
+  { path: 'cats/create', component: CatCreateComponent, canActivate: [LoggedInGuard]},
+  { path: 'cats/:id', component: CatDetailComponent, canActivate: [LoggedInGuard]},
+  { path: 'dogs', component: DogListComponent, canActivate: [LoggedInGuard]},
 ];
 
 @NgModule({

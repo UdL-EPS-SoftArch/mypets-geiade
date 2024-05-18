@@ -12,13 +12,35 @@
 <div class="card mb-1" *ngFor="let cat of cats">
     <div class="card-block row m-1 col-12">
       <div class="card-body row align-items-center">
-        <div class="col-6 mt-1">
-          <h6 class="card-subtitle text-muted">Name</h6>
-          <a class="card-text" [routerLink]="['/cats', cat.id]">{{cat.name}}</a>
-        </div>
-        <div class="col-6 mt-1">
+        <div class="col-3 mt-1">
           <h6 class="card-subtitle text-muted">Chip</h6>
-          <p class="card-text">{{cat.chip}}</p>
+          <p class="card-text" [routerLink]="['/cats', cat.id]">{{cat.chip}}</p>
+        </div>
+        <div class="col-3 mt-1">
+          <h6 class="card-subtitle text-muted">Name</h6>
+          <p class="card-text">{{cat.name}}</p>
+        </div>
+        <div class="col-3 mt-1">
+          <h6 class="card-subtitle text-muted">Date of birth</h6>
+          <p class="card-text">{{cat.dateOfBirth}}</p>
+        </div>
+        <div class="col-3 mt-1 d-flex justify-content-end">
+          <button
+            id="seeCat"
+            type="button"
+            [routerLink]="['/cats', cat.id]"
+            class="btn btn-primary ms-3"
+          >
+            <i class="fa fa-eye"></i>
+          </button>
+          <button
+            id="seeCat"
+            type="button"
+            [routerLink]="['/cats/edit', cat.id]"
+            class="btn btn-secondary ms-3"
+          >
+            <i class="fa fa-pencil"></i>
+          </button>
         </div>
       </div>
     </div>

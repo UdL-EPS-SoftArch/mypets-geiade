@@ -53,7 +53,7 @@ export class CatCreateComponent implements OnInit{
       race: new FormControl(this.cat.race, [
         Validators.required,
       ]),
-      isDangerous: new FormControl(this.cat.isDangerous, []),
+      dangerous: new FormControl(this.cat.dangerous, []),
       meowingLevel: new FormControl(this.cat.meowingLevel, [
         Validators.required,
       ]),
@@ -117,8 +117,8 @@ export class CatCreateComponent implements OnInit{
     return this.catForm.get('dateOfBirth');
   }
 
-  get isAdopted() {
-    return this.catForm.get('isAdopted');
+  get adopted() {
+    return this.catForm.get('adopted');
   }
 
   get colour() {
@@ -137,8 +137,8 @@ export class CatCreateComponent implements OnInit{
     return this.catForm.get('race');
   }
 
-  get isDangerous() {
-    return this.catForm.get('isDangerous');
+  get dangerous() {
+    return this.catForm.get('dangerous');
   }
 
   get meowingLevel() {
@@ -146,7 +146,7 @@ export class CatCreateComponent implements OnInit{
   }
 
   onSubmit(): void {
-    this.cat.isAdopted = false;
+    this.cat.adopted = false;
     this.catService
       .createResource({ body: this.cat })
       .subscribe((cat: Cat) => {

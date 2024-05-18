@@ -7,12 +7,12 @@ export class Pet extends Resource {
     chip: string;
     name: string;
     dateOfBirth: Date;
-    isAdopted: boolean;
+    adopted: boolean;
     colour: string;
     size: number;
     sex: string;
     race: string;
-    isDangerous: boolean;
+    dangerous: boolean;
 
     constructor(values: object = {}) {
         super();
