@@ -1,0 +1,28 @@
+<div class="card mb-4">
+  <div class="card-block">
+    <h4 class="card-title col-md-12 p-3">{{role.name}}</h4>
+    <div class="card-body row m-1">
+      <div class="col-md-4 p-3">
+        <h6 class="card-subtitle text-muted">Role Name</h6>
+        <p class="card-text">{{role.name}}</p>
+      </div>
+      <div class="col-md-4 p-3">
+        <h6 class="card-subtitle text-muted">Role ID</h6>
+        <p class="card-text">{{role.id}}</p>
+      </div>
+      <!-- You can add more role-related details here -->
+    </div>
+    <div class="card-footer text-right">
+      <button id="listBtn" type="button" [routerLink]="['/role']"
+              class="btn m-1 btn-outline-primary">Role List
+      </button>
+      <button id="editBtn" type="button" [routerLink]="['edit']"
+              class="btn m-1 btn-outline-success">Edit
+      </button>
+      <button id="deleteBtn" type="button" [routerLink]="['delete']"
+              class="btn m-1 btn-outline-danger">Delete
+      </button>
+    </div>
+  </div>
+</div>
+

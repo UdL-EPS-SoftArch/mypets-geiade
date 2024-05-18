@@ -11,6 +11,8 @@ import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import { ShelterListComponent } from './shelter/shelter-list/shelter-list.component'
 import {RoleListComponent} from "./role/role-list/role-list.component";
 import {RoleCreateComponent} from "./role/role-create/role-create.component"
+import {RoleDeleteComponent} from "./role/role-delete/role-delete.component";
+import {RoleDetailComponent} from "./role/role-detail/role-detail.component";
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'shelters', component: ShelterListComponent},
   {path: 'role', component:RoleListComponent},
   {path: 'role/create', component:RoleCreateComponent},
+  {path:'role/:id/delete', component:RoleDeleteComponent},
+  {path:'role/:id', component:RoleDetailComponent},
 ];
 
 @NgModule({

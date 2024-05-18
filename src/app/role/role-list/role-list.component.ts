@@ -26,6 +26,7 @@ export class RoleListComponent implements OnInit {
       })
       .subscribe((page: PagedResourceCollection<Role>) => {
         this.roles = page.resources;
+        console.log(this.roles);
         this.totalRoles = page.totalElements;
       });
   }

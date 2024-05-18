@@ -26,6 +26,8 @@ import {UserService} from './user/user.service';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {RoleListComponent} from './role/role-list/role-list.component';
 import {RoleCreateComponent} from './role/role-create/role-create.component';
+import {RoleDeleteComponent} from "./role/role-delete/role-delete.component";
+import {RoleDetailComponent} from "./role/role-detail/role-detail.component";
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import {RoleCreateComponent} from './role/role-create/role-create.component';
     UserSearchComponent,
     RoleListComponent,
     RoleCreateComponent,
+    RoleDeleteComponent,
+    RoleDetailComponent,
   ],
   imports: [
     BrowserModule,
