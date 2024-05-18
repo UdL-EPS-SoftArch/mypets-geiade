@@ -32,6 +32,7 @@ import { CatListComponent } from './pet/cat/cat-list/cat-list.component';
 import { DogListComponent } from './pet/dog/dog-list/dog-list.component';
 import { CatService } from './pet/cat/cat.service';
 import { DogService } from './pet/dog/dog.service';
+import { CatCreateComponent } from './pet/cat/cat-create/cat-create.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { DogService } from './pet/dog/dog.service';
     ShelterCreateComponent,
     ShelterDetailComponent,
     CatListComponent,
+    CatCreateComponent,
     DogListComponent,
   ],
   imports: [

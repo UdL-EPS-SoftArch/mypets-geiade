@@ -12,6 +12,7 @@ import { ShelterListComponent } from './shelter/shelter-list/shelter-list.compon
 import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
 import { CatListComponent } from './pet/cat/cat-list/cat-list.component';
 import { DogListComponent } from './pet/dog/dog-list/dog-list.component';
+import { CatCreateComponent } from './pet/cat/cat-create/cat-create.component';
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'shelters', component: ShelterListComponent},
   { path: 'shelters/create', component: ShelterCreateComponent},
   { path: 'cats', component: CatListComponent},
+  { path: 'cats/create', component: CatCreateComponent},
   { path: 'dogs', component: DogListComponent},
 ];
 

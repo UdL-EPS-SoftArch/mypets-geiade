@@ -1,3 +1,14 @@
+<div class="d-flex w-full justify-content-end mb-3">
+  <button
+        id="createCat"
+        type="button"
+        [routerLink]="['/cats/create']"
+        class="btn btn-success ms-3"
+      >
+        <i class="fa fa-plus-circle me-2"></i>
+        Create
+  </button>
+</div>
 <div class="card mb-1" *ngFor="let cat of cats">
     <div class="card-block row m-1 col-12">
       <div class="card-body row align-items-center">
