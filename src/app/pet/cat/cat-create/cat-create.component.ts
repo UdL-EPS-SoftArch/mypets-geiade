@@ -16,8 +16,6 @@ export class CatCreateComponent implements OnInit{
   public isModalSaved: boolean = false;
   public cats: Cat[] = [];
   public cat: Cat;
-  public commonNameInput: string = '';
-  public commonEmailsList: any = [];
   public catForm: FormGroup;
 
   constructor(
