@@ -28,6 +28,10 @@ import {ShelterService} from "./shelter/shelter.service";
 import {ShelterListComponent} from "./shelter/shelter-list/shelter-list.component";
 import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
 import {ShelterDetailComponent} from "./shelter/shelter-detail/shelter-detail.component";
+import { CatListComponent } from './pet/cat/cat-list/cat-list.component';
+import { DogListComponent } from './pet/dog/dog-list/dog-list.component';
+import { CatService } from './pet/cat/cat.service';
+import { DogService } from './pet/dog/dog.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,9 @@ import {ShelterDetailComponent} from "./shelter/shelter-detail/shelter-detail.co
     UserSearchComponent,
     ShelterListComponent,
     ShelterCreateComponent,
-    ShelterDetailComponent
+    ShelterDetailComponent,
+    CatListComponent,
+    DogListComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,12 +63,12 @@ import {ShelterDetailComponent} from "./shelter/shelter-detail/shelter-detail.co
     LoginBasicModule,
     ErrorHandlerModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
-    AuthenticationBasicService, LoggedInGuard, UserService, ShelterService, provideAnimationsAsync()
+    AuthenticationBasicService, LoggedInGuard, UserService, ShelterService, CatService, DogService, provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
