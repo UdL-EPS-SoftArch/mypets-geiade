@@ -15,6 +15,7 @@ import { DogListComponent } from './pet/dog/dog-list/dog-list.component';
 import { CatCreateComponent } from './pet/cat/cat-create/cat-create.component';
 import { CatDetailComponent } from './pet/cat/cat-detail/cat-detail.component';
 import { CatEditComponent } from './pet/cat/cat-edit/cat-edit.component';
+import { CatDeleteComponent } from './pet/cat/cat-delete/cat-delete.component';
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -30,7 +31,8 @@ const routes: Routes = [
   { path: 'cats', component: CatListComponent, canActivate: [LoggedInGuard]},
   { path: 'cats/create', component: CatCreateComponent, canActivate: [LoggedInGuard]},
   { path: 'cats/:id', component: CatDetailComponent, canActivate: [LoggedInGuard]},
-  { path: 'cats/edit/:id', component: CatEditComponent, canActivate: [LoggedInGuard]},
+  { path: 'cats/:id/edit', component: CatEditComponent, canActivate: [LoggedInGuard]},
+  { path: 'cats/:id/delete', component: CatDeleteComponent, canActivate: [LoggedInGuard]},
   { path: 'dogs', component: DogListComponent, canActivate: [LoggedInGuard]},
 ];
 

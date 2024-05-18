@@ -52,10 +52,10 @@
         <button id="listBtn" type="button" [routerLink]="['/cats']"
                 class="btn m-1 btn-outline-primary">Cat List
         </button>
-        <button id="editBtn" type="button" [routerLink]="['/cats/edit', cat.id]"
+        <button id="editBtn" type="button" [routerLink]="['edit']"
                 class="btn m-1 btn-outline-success">Edit
         </button>
-        <button id="deleteBtn" type="button" [routerLink]="['/cats/delete', cat.id]"
+        <button id="deleteBtn" type="button" [routerLink]="['delete']"
                 class="btn m-1 btn-outline-danger">Delete
         </button>
       </div>
