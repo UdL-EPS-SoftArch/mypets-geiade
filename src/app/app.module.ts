@@ -36,6 +36,10 @@ import {
 import {
   ShelterCertificateDeleteComponent
 } from "./shelter-certificate/shelter-certificate-delete/shelter-certificate-delete.component";
+import {ShelterService} from "./shelter/shelter.service";
+import {ShelterListComponent} from "./shelter/shelter-list/shelter-list.component";
+import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
+import {ShelterDetailComponent} from "./shelter/shelter-detail/shelter-detail.component";
 
 @NgModule({
   declarations: [
@@ -52,7 +56,10 @@ import {
     ShelterCertificateListComponent,
     ShelterCertificateCreateComponent,
     ShelterCertificateDetailComponent,
-    ShelterCertificateDeleteComponent
+    ShelterCertificateDeleteComponent,
+    ShelterListComponent,
+    ShelterCreateComponent,
+    ShelterDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -66,12 +73,12 @@ import {
     LoginBasicModule,
     ErrorHandlerModule,
     NgbModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
-    AuthenticationBasicService, LoggedInGuard, UserService, provideAnimationsAsync()
+    AuthenticationBasicService, LoggedInGuard, UserService, ShelterService, provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
