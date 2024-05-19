@@ -52,7 +52,7 @@ import {ShelterDetailComponent} from "./shelter/shelter-detail/shelter-detail.co
     AdoptionDeleteComponent,
     AdoptionDetailComponent,
     AdoptionEditComponent,
-    AdoptionListComponent
+    AdoptionListComponent,
     ShelterListComponent,
     ShelterCreateComponent,
     ShelterDetailComponent
