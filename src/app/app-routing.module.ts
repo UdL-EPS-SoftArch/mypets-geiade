@@ -15,6 +15,7 @@ import {AdoptionDetailComponent} from './adoptions/adoption-detail/adoption-deta
 import {AdoptionDeleteComponent} from './adoptions/adoption-delete/adoption-delete.component';
 import {AdoptionCreateComponent} from "./adoptions/adoption-create/adoption-create.component";
 import { ShelterListComponent } from './shelter/shelter-list/shelter-list.component'
+import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'adoptions/detail', component: AdoptionDetailComponent },
   { path: 'adoptions/search', component: AdoptionSearchComponent },
   { path: 'shelters', component: ShelterListComponent},
+  { path: 'shelters/create', component: ShelterCreateComponent},
 ];
 
 @NgModule({
