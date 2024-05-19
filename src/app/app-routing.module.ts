@@ -30,7 +30,7 @@ const routes: Routes = [
   { path: 'adoptions/edit', component: AdoptionEditComponent },
   { path: 'adoptions/delete', component: AdoptionDeleteComponent },
   { path: 'adoptions/detail', component: AdoptionDetailComponent },
-  { path: 'adoptions/search', component: AdoptionSearchComponent }
+  { path: 'adoptions/search', component: AdoptionSearchComponent },
   { path: 'shelters', component: ShelterListComponent},
 ];
 
