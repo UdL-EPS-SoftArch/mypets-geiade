@@ -1,0 +1,87 @@
+
+<form
+  id="location-form"
+  (ngSubmit)="onSubmit()"
+  #form="ngForm"
+  [formGroup]="locationForm"
+>
+  <fieldset>
+    <div class="form-group mb-3">
+      <label class="control-label" for="address">Address*</label>
+      <input
+        id="address"
+        name="address"
+        formControlName="address"
+        type="text"
+        class="form-control"
+        [(ngModel)]="location.address"
+      />
+
+    </div>
+
+    <div class="form-group mb-3">
+      <label class="control-label" for="city">City</label>
+      <div class="city-input">
+        <input
+          id="city"
+          name="city"
+          formControlName="city"
+          type="text"
+          class="form-control"
+          [(ngModel)]="location.city"
+        />
+      </div>
+
+    </div>
+
+    <div class="form-group mb-3">
+      <label class="control-label" for="province">Province</label>
+      <div class="mobile-input">
+        <input
+          id="province"
+          name="province"
+          formControlName="province"
+          type="text"
+          class="form-control"
+          [(ngModel)]="location.province"
+        />
+      </div>
+
+    </div>
+
+    <div class="form-group mb-3">
+      <label class="control-label" for="postalCode">PostalCode</label>
+      <div class="mobile-input">
+        <input
+          id="postalCode"
+          name="postalCode"
+          formControlName="postalCode"
+          type="number"
+          class="form-control"
+          [(ngModel)]="location.postalCode"
+        />
+      </div>
+
+    </div>
+
+    <!-- Save and back buttons -->
+    <div class="form-group fa-pull-right mt-3">
+      <button
+        id="listBtn"
+        type="button"
+        [routerLink]="['..']"
+        class="btn btn-outline-primary pull-right"
+      >
+        Back
+      </button>
+      <button
+        id="submit"
+        type="submit"
+        [disabled]="!form.form.valid"
+        class="btn btn-success ms-3"
+      >
+        Submit
+      </button>
+    </div>
+  </fieldset>
+</form>
