@@ -1,4 +1,3 @@
-
 import { Component, EventEmitter, Output } from '@angular/core';
 import { LocationService } from '../location.service';
 import { Observable, of, OperatorFunction } from 'rxjs';
