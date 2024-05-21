@@ -14,8 +14,10 @@ import {AdoptionEditComponent} from './adoptions/adoption-edit/adoption-edit.com
 import {AdoptionDetailComponent} from './adoptions/adoption-detail/adoption-detail.component';
 import {AdoptionDeleteComponent} from './adoptions/adoption-delete/adoption-delete.component';
 import {AdoptionCreateComponent} from "./adoptions/adoption-create/adoption-create.component";
-import { ShelterListComponent } from './shelter/shelter-list/shelter-list.component'
+import {ShelterListComponent} from './shelter/shelter-list/shelter-list.component'
 import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
+import {LocationListComponent} from "./location/location-list/location-list.component";
+import {LocationCreateComponent} from "./location/location-create/location-create.component";
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -23,9 +25,8 @@ const routes: Routes = [
   { path: 'users/:id/edit', component: UserEditComponent, canActivate: [LoggedInGuard]},
   { path: 'users/:id', component: UserDetailComponent, canActivate: [LoggedInGuard]},
   { path: 'users', component: UserListComponent, canActivate: [LoggedInGuard]},
-  { path: 'about', component: AboutComponent},
-  { path: '404', component: NotFoundComponent},
-  { path: '', redirectTo: 'about', pathMatch: 'full'},
+  { path: 'locations', component: LocationListComponent, canActivate: [LoggedInGuard]},
+  { path: 'locations/create', component: LocationCreateComponent, canActivate: [LoggedInGuard]},
   { path: 'adoptions' , component: AdoptionListComponent },
   { path: 'adoptions/create', component: AdoptionCreateComponent },
   { path: 'adoptions/edit', component: AdoptionEditComponent },
@@ -34,6 +35,9 @@ const routes: Routes = [
   { path: 'adoptions/search', component: AdoptionSearchComponent },
   { path: 'shelters', component: ShelterListComponent},
   { path: 'shelters/create', component: ShelterCreateComponent},
+  { path: 'about', component: AboutComponent},
+  { path: '404', component: NotFoundComponent},
+  { path: '', redirectTo: 'about', pathMatch: 'full'},
 ];
 
 @NgModule({
