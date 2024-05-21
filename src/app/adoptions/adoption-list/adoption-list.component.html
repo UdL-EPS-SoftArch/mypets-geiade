@@ -1,0 +1,26 @@
+<div class="card mb-1" *ngFor="let adoption of adoption">
+  <div class="card-block row m-1 col-12">
+    <div class="card-body row align-items-center">
+      <div class="col-6 mt-1">
+        <h6 class="card-subtitle text-muted">Adoptions ID</h6>
+        <a class="card-text" [routerLink]="['/adoptions', adoption.id]">{{adoption.id}}</a>
+      </div>
+      <div class="col-6 mt-1">
+        <h6 class="card-subtitle text-muted">Pet</h6>
+        <p class="card-text">{{adoption.pet}}</p>
+      </div>
+      <div class="col-6 mt-1">
+        <h6 class="card-subtitle text-muted">User</h6>
+        <p class="card-text">{{adoption.user}}</p>
+      </div>
+      <div class="col-6 mt-1">
+        <h6 class="card-subtitle text-muted">Time</h6>
+        <p class="card-text">{{adoption.localDateTime}}</p>
+      </div>
+    </div>
+  </div>
+
+
+  <ngb-pagination class="d-flex justify-content-center"
+                  [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalAdoption"
+                  (pageChange)="changePage()"></ngb-pagination>
