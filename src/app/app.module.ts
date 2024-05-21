@@ -42,6 +42,12 @@ import {LocationService} from './location/location.service'
 import {LocationListComponent} from './location/location-list/location-list.component';
 import {LocationSearchComponent} from './location/location-search/location-search.component';
 import {LocationCreateComponent} from "./location/location-create/location-create.component";
+import {ScheduleService} from './schedule/schedule.service'
+import {ScheduleListComponent} from './schedule/schedule-list/schedule-list.component';
+import {ScheduleSearchComponent} from './schedule/schedule-search/schedule-search.component';
+import {ScheduleCreateComponent} from "./schedule/schedule-create/schedule-create.component";
+import {ScheduleDetailComponent} from "./schedule/schedule-detail/schedule-detail.component";
+
 
 @NgModule({
   declarations: [
@@ -65,6 +71,10 @@ import {LocationCreateComponent} from "./location/location-create/location-creat
     ShelterCertificateCreateComponent,
     ShelterCertificateDetailComponent,
     ShelterCertificateDeleteComponent,
+    ScheduleListComponent,
+    ScheduleSearchComponent,
+    ScheduleCreateComponent,
+    ScheduleDetailComponent,
     ShelterListComponent,
     ShelterCreateComponent,
     ShelterDetailComponent,
@@ -89,7 +99,7 @@ import {LocationCreateComponent} from "./location/location-create/location-creat
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
-    AuthenticationBasicService, LoggedInGuard, UserService, ShelterService, LocationService,
+    AuthenticationBasicService, LoggedInGuard, UserService, ScheduleService, ShelterService, LocationService,
     provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
