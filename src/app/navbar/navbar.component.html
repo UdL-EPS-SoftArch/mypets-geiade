@@ -19,6 +19,35 @@
         </div>
       </li>
       <li class="nav-item" *ngIf="isRole('user')" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="shelterCertificateDropdown" role="button"
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Shelter Certificate</a>
+        <div class="dropdown-menu" aria-labelledby="playDropdown" ngbDropdownMenu>
+          <a class="dropdown-item" [routerLinkActive]="" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/shelter-certificate']"><span class="fas fa-user-circle"></span> List</a>
+          <a class="dropdown-item" [routerLinkActive]="" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/shelter-certificate/create']"><span class="fas fa-user-circle"></span> Create</a>
+        </div>
+      </li>
+      <li class="nav-item" *ngIf="isRole('user')" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="playerDropdown" role="button"
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Schedules</a>
+        <div class="dropdown-menu" aria-labelledby="schedulesDropdown" ngbDropdownMenu>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/schedules']"><span class="fas fa-user-circle"></span> List</a>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/schedules/create']"><span class="fas fa-user-circle"></span> Create</a>
+        </div>
+      <li class="nav-item" *ngIf="isRole('user')" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="shelterDropdown" role="button"
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Shelters</a>
+        <div class="dropdown-menu" aria-labelledby="playDropdown" ngbDropdownMenu>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/shelters']"><span class="fas fa-user-circle"></span> List</a>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/shelters/create']"><span class="fas fa-user-circle"></span> Create</a>
+        </div>
+      </li>
+      <li class="nav-item" *ngIf="isRole('user')" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="roleDropdown" role="button"
            aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Roles</a>
         <div class="dropdown-menu" aria-labelledby="roleDropdown" ngbDropdownMenu>
@@ -26,14 +55,16 @@
              [routerLink]="['/role']"><span class="fas fa-user-circle"></span> List</a>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/role/create']"><span class="fas fa-user-circle"></span> Create</a>
-          <a class="nav-link dropdown-toggle" id="shelterDropdown" role="button"
-             aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Shelters</a>
         </div>
+      </li>
+      <li class="nav-item" *ngIf="isRole('user')" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="locationDropdown" role="button"
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Locations</a>
         <div class="dropdown-menu" aria-labelledby="playDropdown" ngbDropdownMenu>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
-             [routerLink]="['/shelters']"><span class="fas fa-user-circle"></span> List</a>
+             [routerLink]="['/locations']"><span class="fas fa-user-circle"></span> List</a>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
-             [routerLink]="['/shelters/create']"><span class="fas fa-user-circle"></span> Create</a>
+             [routerLink]="['/locations/create']"><span class="fas fa-user-circle"></span> Create</a>
         </div>
       </li>
     </ul>

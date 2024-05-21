@@ -24,6 +24,16 @@ import {AuthenticationBasicService} from './login-basic/authentication-basic.ser
 import {LoggedInGuard} from './login-basic/loggedin.guard';
 import {UserService} from './user/user.service';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {AdoptionSearchComponent} from './adoptions/adoption-search/adoption-search.component';
+import {AdoptionListComponent} from './adoptions/adoption-list/adoption-list.component';
+import {AdoptionEditComponent} from './adoptions/adoption-edit/adoption-edit.component';
+import {AdoptionDetailComponent} from './adoptions/adoption-detail/adoption-detail.component';
+import {AdoptionDeleteComponent} from './adoptions/adoption-delete/adoption-delete.component';
+import {AdoptionCreateComponent} from "./adoptions/adoption-create/adoption-create.component";
+import {ShelterCertificateListComponent} from "./shelter-certificate/shelter-certificate-list/shelter-certificate-list.component";
+import {ShelterCertificateCreateComponent} from "./shelter-certificate/shelter-certificate-create/shelter-certificate-create.component";
+import {ShelterCertificateDetailComponent} from "./shelter-certificate/shelter-certificate-detail/shelter-certificate-detail.component";
+import {ShelterCertificateDeleteComponent} from "./shelter-certificate/shelter-certificate-delete/shelter-certificate-delete.component";
 import {RoleListComponent} from './role/role-list/role-list.component';
 import {RoleCreateComponent} from './role/role-create/role-create.component';
 import {RoleDeleteComponent} from "./role/role-delete/role-delete.component";
@@ -32,6 +42,16 @@ import {ShelterService} from "./shelter/shelter.service";
 import {ShelterListComponent} from "./shelter/shelter-list/shelter-list.component";
 import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
 import {ShelterDetailComponent} from "./shelter/shelter-detail/shelter-detail.component";
+import {LocationService} from './location/location.service'
+import {LocationListComponent} from './location/location-list/location-list.component';
+import {LocationSearchComponent} from './location/location-search/location-search.component';
+import {LocationCreateComponent} from "./location/location-create/location-create.component";
+import {ScheduleService} from './schedule/schedule.service'
+import {ScheduleListComponent} from './schedule/schedule-list/schedule-list.component';
+import {ScheduleSearchComponent} from './schedule/schedule-search/schedule-search.component';
+import {ScheduleCreateComponent} from "./schedule/schedule-create/schedule-create.component";
+import {ScheduleDetailComponent} from "./schedule/schedule-detail/schedule-detail.component";
+
 
 @NgModule({
   declarations: [
@@ -45,13 +65,30 @@ import {ShelterDetailComponent} from "./shelter/shelter-detail/shelter-detail.co
     UserEditComponent,
     UserDeleteComponent,
     UserSearchComponent,
+    AdoptionSearchComponent,
+    AdoptionCreateComponent,
+    AdoptionDeleteComponent,
+    AdoptionDetailComponent,
+    AdoptionEditComponent,
+    AdoptionListComponent,
+    ShelterCertificateListComponent,
+    ShelterCertificateCreateComponent,
+    ShelterCertificateDetailComponent,
+    ShelterCertificateDeleteComponent,
+    ScheduleListComponent,
+    ScheduleSearchComponent,
+    ScheduleCreateComponent,
+    ScheduleDetailComponent,
     RoleListComponent,
     RoleCreateComponent,
     RoleDeleteComponent,
     RoleDetailComponent,
     ShelterListComponent,
     ShelterCreateComponent,
-    ShelterDetailComponent
+    ShelterDetailComponent,
+    LocationListComponent,
+    LocationSearchComponent,
+    LocationCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +107,8 @@ import {ShelterDetailComponent} from "./shelter/shelter-detail/shelter-detail.co
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
-    AuthenticationBasicService, LoggedInGuard, UserService, ShelterService, provideAnimationsAsync()
+    AuthenticationBasicService, LoggedInGuard, UserService, ScheduleService, ShelterService, LocationService,
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
