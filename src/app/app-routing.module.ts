@@ -8,6 +8,14 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
+import {AdoptionSearchComponent} from './adoptions/adoption-search/adoption-search.component';
+import {AdoptionListComponent} from './adoptions/adoption-list/adoption-list.component';
+import {AdoptionEditComponent} from './adoptions/adoption-edit/adoption-edit.component';
+import {AdoptionDetailComponent} from './adoptions/adoption-detail/adoption-detail.component';
+import {AdoptionDeleteComponent} from './adoptions/adoption-delete/adoption-delete.component';
+import {AdoptionCreateComponent} from "./adoptions/adoption-create/adoption-create.component";
+import {ShelterListComponent} from './shelter/shelter-list/shelter-list.component'
+import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
 import {LocationListComponent} from "./location/location-list/location-list.component";
 import {LocationCreateComponent} from "./location/location-create/location-create.component";
 
@@ -19,6 +27,14 @@ const routes: Routes = [
   { path: 'users', component: UserListComponent, canActivate: [LoggedInGuard]},
   { path: 'locations', component: LocationListComponent, canActivate: [LoggedInGuard]},
   { path: 'locations/create', component: LocationCreateComponent, canActivate: [LoggedInGuard]},
+  { path: 'adoptions' , component: AdoptionListComponent },
+  { path: 'adoptions/create', component: AdoptionCreateComponent },
+  { path: 'adoptions/edit', component: AdoptionEditComponent },
+  { path: 'adoptions/delete', component: AdoptionDeleteComponent },
+  { path: 'adoptions/detail', component: AdoptionDetailComponent },
+  { path: 'adoptions/search', component: AdoptionSearchComponent },
+  { path: 'shelters', component: ShelterListComponent},
+  { path: 'shelters/create', component: ShelterCreateComponent},
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full'},

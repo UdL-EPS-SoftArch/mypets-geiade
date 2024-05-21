@@ -23,7 +23,17 @@ import {HttpErrorInterceptor} from './error-handler/http-error-interceptor';
 import {AuthenticationBasicService} from './login-basic/authentication-basic.service';
 import {LoggedInGuard} from './login-basic/loggedin.guard';
 import {UserService} from './user/user.service';
-
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {AdoptionSearchComponent} from './adoptions/adoption-search/adoption-search.component';
+import {AdoptionListComponent} from './adoptions/adoption-list/adoption-list.component';
+import {AdoptionEditComponent} from './adoptions/adoption-edit/adoption-edit.component';
+import {AdoptionDetailComponent} from './adoptions/adoption-detail/adoption-detail.component';
+import {AdoptionDeleteComponent} from './adoptions/adoption-delete/adoption-delete.component';
+import {AdoptionCreateComponent} from "./adoptions/adoption-create/adoption-create.component";
+import {ShelterService} from "./shelter/shelter.service";
+import {ShelterListComponent} from "./shelter/shelter-list/shelter-list.component";
+import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
+import {ShelterDetailComponent} from "./shelter/shelter-detail/shelter-detail.component";
 import {LocationService} from './location/location.service'
 import {LocationListComponent} from './location/location-list/location-list.component';
 import {LocationSearchComponent} from './location/location-search/location-search.component';
@@ -41,6 +51,15 @@ import {LocationCreateComponent} from "./location/location-create/location-creat
     UserEditComponent,
     UserDeleteComponent,
     UserSearchComponent,
+    AdoptionSearchComponent,
+    AdoptionCreateComponent,
+    AdoptionDeleteComponent,
+    AdoptionDetailComponent,
+    AdoptionEditComponent,
+    AdoptionListComponent,
+    ShelterListComponent,
+    ShelterCreateComponent,
+    ShelterDetailComponent,
     LocationListComponent,
     LocationSearchComponent,
     LocationCreateComponent
@@ -57,12 +76,13 @@ import {LocationCreateComponent} from "./location/location-create/location-creat
     LoginBasicModule,
     ErrorHandlerModule,
     NgbModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
-    AuthenticationBasicService, LoggedInGuard, UserService, LocationService
+    AuthenticationBasicService, LoggedInGuard, UserService, ShelterService, LocationService,
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
