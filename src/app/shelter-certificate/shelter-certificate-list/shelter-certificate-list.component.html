@@ -1,0 +1,22 @@
+<app-user-search (emitResults)="detail($event)"></app-user-search>
+
+<div class="card mb-1" *ngFor="let shelterCertificate of shelterCertificates">
+  <div class="card-block row m-1 col-12">
+    <div class="card-body row align-items-center">
+      <div class="col-6 mt-1">
+        <h6 class="card-subtitle text-muted">Uri</h6>
+        <a class="card-text" [routerLink]="['/shelter-certificate', shelterCertificate.id]">{{shelterCertificate.uri}}</a>
+      </div>
+      <div class="col-6 mt-1">
+        <h6 class="card-subtitle text-muted">Expiration Date</h6>
+        <p class="card-text">{{shelterCertificate.expirationDate}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ngb-pagination class="d-flex justify-content-center"
+                [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalShelterCertificates"
+                (pageChange)="changePage()"></ngb-pagination>
+
+

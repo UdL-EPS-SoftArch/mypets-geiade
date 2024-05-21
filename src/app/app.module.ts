@@ -30,6 +30,10 @@ import {AdoptionEditComponent} from './adoptions/adoption-edit/adoption-edit.com
 import {AdoptionDetailComponent} from './adoptions/adoption-detail/adoption-detail.component';
 import {AdoptionDeleteComponent} from './adoptions/adoption-delete/adoption-delete.component';
 import {AdoptionCreateComponent} from "./adoptions/adoption-create/adoption-create.component";
+import {ShelterCertificateListComponent} from "./shelter-certificate/shelter-certificate-list/shelter-certificate-list.component";
+import {ShelterCertificateCreateComponent} from "./shelter-certificate/shelter-certificate-create/shelter-certificate-create.component";
+import {ShelterCertificateDetailComponent} from "./shelter-certificate/shelter-certificate-detail/shelter-certificate-detail.component";
+import {ShelterCertificateDeleteComponent} from "./shelter-certificate/shelter-certificate-delete/shelter-certificate-delete.component";
 import {ShelterService} from "./shelter/shelter.service";
 import {ShelterListComponent} from "./shelter/shelter-list/shelter-list.component";
 import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
@@ -57,6 +61,10 @@ import {LocationCreateComponent} from "./location/location-create/location-creat
     AdoptionDetailComponent,
     AdoptionEditComponent,
     AdoptionListComponent,
+    ShelterCertificateListComponent,
+    ShelterCertificateCreateComponent,
+    ShelterCertificateDetailComponent,
+    ShelterCertificateDeleteComponent,
     ShelterListComponent,
     ShelterCreateComponent,
     ShelterDetailComponent,

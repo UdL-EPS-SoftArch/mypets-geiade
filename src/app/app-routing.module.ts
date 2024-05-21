@@ -15,6 +15,10 @@ import {AdoptionDetailComponent} from './adoptions/adoption-detail/adoption-deta
 import {AdoptionDeleteComponent} from './adoptions/adoption-delete/adoption-delete.component';
 import {AdoptionCreateComponent} from "./adoptions/adoption-create/adoption-create.component";
 import {ShelterListComponent} from './shelter/shelter-list/shelter-list.component'
+import {ShelterCertificateListComponent} from "./shelter-certificate/shelter-certificate-list/shelter-certificate-list.component";
+import {ShelterCertificateCreateComponent} from "./shelter-certificate/shelter-certificate-create/shelter-certificate-create.component";
+import {ShelterCertificateDetailComponent} from "./shelter-certificate/shelter-certificate-detail/shelter-certificate-detail.component";
+import {ShelterCertificateDeleteComponent} from "./shelter-certificate/shelter-certificate-delete/shelter-certificate-delete.component";
 import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
 import {LocationListComponent} from "./location/location-list/location-list.component";
 import {LocationCreateComponent} from "./location/location-create/location-create.component";
@@ -35,6 +39,10 @@ const routes: Routes = [
   { path: 'adoptions/search', component: AdoptionSearchComponent },
   { path: 'shelters', component: ShelterListComponent},
   { path: 'shelters/create', component: ShelterCreateComponent},
+  { path: 'shelter-certificate', component: ShelterCertificateListComponent},
+  { path: 'shelter-certificate/create', component: ShelterCertificateCreateComponent},
+  { path: 'shelter-certificate/:id', component: ShelterCertificateDetailComponent},
+  { path: 'shelter-certificate/:id/delete', component: ShelterCertificateDeleteComponent},
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full'},
