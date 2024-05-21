@@ -5,7 +5,7 @@ import { User } from '../../login-basic/user';
 import { PagedResourceCollection } from '@lagoshny/ngx-hateoas-client';
 
 @Component({
-  selector: 'app-shelter-certificate-list',
+  selector: 'app-user-list',
   templateUrl: './user-list.component.html'
 })
 export class UserListComponent implements OnInit {
