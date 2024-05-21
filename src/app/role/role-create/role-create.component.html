@@ -1,0 +1,26 @@
+<form id="role-form" (ngSubmit)="onSubmit()" #form="ngForm" [formGroup]="roleForm" class="needs-validation" novalidate>
+  <div class="mb-3">
+    <!-- Etiqueta y campo de entrada para el nombre del rol -->
+    <label for="name" class="form-label">Name*</label>
+    <input id="name" name="name" formControlName="name" type="text" class="form-control" [(ngModel)]="role.name" required>
+    <!-- Mostrar mensaje de error si el nombre es requerido -->
+    <div class="invalid-feedback" *ngIf="name.invalid && (name.dirty || name.touched)">
+      Name is required.
+    </div>
+  </div>
+
+  <!-- Botones de acción -->
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+    <!-- Botón para regresar -->
+    <button id="listBtn" type="button" [routerLink]="['..']" class="btn btn-outline-primary me-2">Back</button>
+    <!-- Botón para enviar el formulario -->
+    <button id="submit" type="submit" [disabled]="!form.valid" class="btn btn-success">Submit</button>
+  </div>
+</form>
+
+<!-- Pop-up de éxito -->
+<div *ngIf="showSuccessMessage" class="alert alert-success alert-dismissible fade show" role="alert">
+  Role created successfully!
+  <button type="button" class="btn-close" (click)="closeSuccessMessage()" aria-label="Close"></button>
+</div>
+

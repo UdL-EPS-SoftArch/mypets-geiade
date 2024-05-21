@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <!-- Título de la página -->
+  <div class="row mb-3">
+    <div class="col-12">
+      <h2>Role List</h2>
+    </div>
+  </div>
+
+  <!-- Lista de roles -->
+  <div class="card mb-1" *ngFor="let role of roles">
+    <div class="card-block row m-1 col-12">
+      <div class="card-body row align-items-center">
+        <div class="col-6 mt-1">
+          <h6 class="card-subtitle text-muted">Name</h6>
+          <a class="card-text" [routerLink]="['/role', role.id]">{{role.name}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Paginación -->
+  <ngb-pagination class="d-flex justify-content-center"
+                  [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalRoles"
+                  (pageChange)="changePage()"></ngb-pagination>
+</div>

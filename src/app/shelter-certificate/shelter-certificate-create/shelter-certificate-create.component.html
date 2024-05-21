@@ -1,0 +1,21 @@
+<form id="user-form" (ngSubmit)="onSubmit()" #form="ngForm">
+  <fieldset>
+
+    <!-- Expiration Date input -->
+    <div class="form-group mb-3" [class.was-validated]="expirationDate.dirty || expirationDate.touched">
+      <label class="control-label" for="expirationDate">Expiration Date*</label>
+      <input id="expirationDate" name="expirationDate" type="date" class="form-control" required
+             [(ngModel)]="shelterCertificate.expirationDate" #expirationDate="ngModel">
+      <div class="invalid-feedback">An expiration date is required</div>
+    </div>
+
+    <!-- Button -->
+    <div class="form-group fa-pull-right">
+      <button id="listBtn" type="button" (click)="onCancel()"
+              class="btn btn-outline-primary pull-right">Back</button>
+      <button id="submit" type="submit" [disabled]="!form.form.valid"
+              class="btn ms-3 btn-success pull-right">Submit</button>
+    </div>
+
+  </fieldset>
+</form>
