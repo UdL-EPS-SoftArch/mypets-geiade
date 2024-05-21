@@ -23,6 +23,12 @@ import {HttpErrorInterceptor} from './error-handler/http-error-interceptor';
 import {AuthenticationBasicService} from './login-basic/authentication-basic.service';
 import {LoggedInGuard} from './login-basic/loggedin.guard';
 import {UserService} from './user/user.service';
+import {AdoptionSearchComponent} from './adoptions/adoption-search/adoption-search.component';
+import {AdoptionListComponent} from './adoptions/adoption-list/adoption-list.component';
+import {AdoptionEditComponent} from './adoptions/adoption-edit/adoption-edit.component';
+import {AdoptionDetailComponent} from './adoptions/adoption-detail/adoption-detail.component';
+import {AdoptionDeleteComponent} from './adoptions/adoption-delete/adoption-delete.component';
+import {AdoptionCreateComponent} from "./adoptions/adoption-create/adoption-create.component";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {ShelterService} from "./shelter/shelter.service";
 import {ShelterListComponent} from "./shelter/shelter-list/shelter-list.component";
@@ -41,6 +47,12 @@ import {ShelterDetailComponent} from "./shelter/shelter-detail/shelter-detail.co
     UserEditComponent,
     UserDeleteComponent,
     UserSearchComponent,
+    AdoptionSearchComponent,
+    AdoptionCreateComponent,
+    AdoptionDeleteComponent,
+    AdoptionDetailComponent,
+    AdoptionEditComponent,
+    AdoptionListComponent,
     ShelterListComponent,
     ShelterCreateComponent,
     ShelterDetailComponent
