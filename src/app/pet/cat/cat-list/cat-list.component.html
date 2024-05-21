@@ -1,0 +1,57 @@
+<div class="w-full d-flex" style="font-size: xx-large;">
+  <i class="fa fa-heart me-3"></i>
+  <p class="mt-2">Cats</p>
+</div>
+<div class="d-flex w-full justify-content-end mb-3">
+  <app-cat-search (emitResults)="detail($event)"></app-cat-search>
+  <button
+        id="createCat"
+        type="button"
+        [routerLink]="['/cats/create']"
+        class="btn btn-success ms-3"
+      >
+        <i class="fa fa-plus-circle me-2"></i>
+        Create
+  </button>
+</div>
+<div class="card mb-1" *ngFor="let cat of cats">
+    <div class="card-block row m-1 col-12">
+      <div class="card-body row align-items-center">
+        <div class="col-3 mt-1">
+          <h6 class="card-subtitle text-muted">Chip</h6>
+          <p class="card-text">{{cat.chip}}</p>
+        </div>
+        <div class="col-3 mt-1">
+          <h6 class="card-subtitle text-muted">Name</h6>
+          <p class="card-text">{{cat.name}}</p>
+        </div>
+        <div class="col-3 mt-1">
+          <h6 class="card-subtitle text-muted">Date of birth</h6>
+          <p class="card-text">{{cat.dateOfBirth}}</p>
+        </div>
+        <div class="col-3 mt-1 d-flex justify-content-end">
+          <button
+            id="seeCat"
+            type="button"
+            [routerLink]="['/cats', cat.id]"
+            class="btn btn-primary ms-3"
+          >
+            <i class="fa fa-eye"></i>
+          </button>
+          <button
+            id="seeCat"
+            type="button"
+            [routerLink]="['/cats/' + cat.id + '/edit']"
+            class="btn btn-secondary ms-3"
+          >
+            <i class="fa fa-pencil"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <ngb-pagination class="d-flex justify-content-center"
+                  [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalCats"
+                  (pageChange)="changePage()"></ngb-pagination>
+  

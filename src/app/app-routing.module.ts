@@ -29,7 +29,16 @@ import {LocationCreateComponent} from "./location/location-create/location-creat
 import {ScheduleListComponent} from "./schedule/schedule-list/schedule-list.component";
 import {ScheduleCreateComponent} from "./schedule/schedule-create/schedule-create.component";
 import {ScheduleDetailComponent} from "./schedule/schedule-detail/schedule-detail.component";
-
+import { CatListComponent } from './pet/cat/cat-list/cat-list.component';
+import { CatCreateComponent } from './pet/cat/cat-create/cat-create.component';
+import { CatDetailComponent } from './pet/cat/cat-detail/cat-detail.component';
+import { CatEditComponent } from './pet/cat/cat-edit/cat-edit.component';
+import { CatDeleteComponent } from './pet/cat/cat-delete/cat-delete.component';
+import { DogListComponent } from './pet/dog/dog-list/dog-list.component';
+import { DogCreateComponent } from './pet/dog/dog-create/dog-create.component';
+import { DogDetailComponent } from './pet/dog/dog-detail/dog-detail.component';
+import { DogEditComponent } from './pet/dog/dog-edit/dog-edit.component';
+import { DogDeleteComponent } from './pet/dog/dog-delete/dog-delete.component';
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -58,6 +67,16 @@ const routes: Routes = [
   { path: 'role/create', component:RoleCreateComponent },
   { path: 'role/:id/delete', component:RoleDeleteComponent },
   { path: 'role/:id', component:RoleDetailComponent },
+  { path: 'cats', component: CatListComponent, canActivate: [LoggedInGuard]},
+  { path: 'cats/create', component: CatCreateComponent, canActivate: [LoggedInGuard]},
+  { path: 'cats/:id', component: CatDetailComponent, canActivate: [LoggedInGuard]},
+  { path: 'cats/:id/edit', component: CatEditComponent, canActivate: [LoggedInGuard]},
+  { path: 'cats/:id/delete', component: CatDeleteComponent, canActivate: [LoggedInGuard]},
+  { path: 'dogs', component: DogListComponent, canActivate: [LoggedInGuard]},
+  { path: 'dogs/create', component: DogCreateComponent, canActivate: [LoggedInGuard]},
+  { path: 'dogs/:id', component: DogDetailComponent, canActivate: [LoggedInGuard]},
+  { path: 'dogs/:id/edit', component: DogEditComponent, canActivate: [LoggedInGuard]},
+  { path: 'dogs/:id/delete', component: DogDeleteComponent, canActivate: [LoggedInGuard]},
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full'},

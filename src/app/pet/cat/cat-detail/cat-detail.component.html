@@ -1,0 +1,63 @@
+<div class="card mb-4">
+    <div class="card-block">
+      <h1 class="card-title col-md-12 px-4 pt-3 text-xxl">{{cat.name}}</h1>
+      <div class="card-body row m-1">
+        <div class="col-md-4 mb-5">
+          <h6 class="card-subtitle text-muted">Chip</h6>
+          <p class="card-text">{{cat.chip}}</p>
+        </div>
+        <div class="col-md-4 mb-5">
+            <h6 class="card-subtitle text-muted">Date of birth</h6>
+            <p class="card-text">{{cat.dateOfBirth}}</p>
+        </div>
+        <div class="col-md-4 mb-5">
+            <h6 class="card-subtitle text-muted">Colour</h6>
+            <div style="width: 100%; height: 24px; background-color: {{cat.colour}}; border: 1px solid;"></div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <h6 class="card-subtitle text-muted">Size</h6>
+            <p class="card-text" *ngIf="cat.size === 1">Small</p>
+            <p class="card-text" *ngIf="cat.size === 2">Average</p>
+            <p class="card-text" *ngIf="cat.size === 3">Large</p>
+            <p class="card-text" *ngIf="cat.size === 4">Extra Large</p>
+        </div>
+        <div class="col-md-4 mb-5">
+            <h6 class="card-subtitle text-muted">Sex</h6>
+            <p class="card-text" *ngIf="cat.sex === 'male'">Male</p>
+            <p class="card-text" *ngIf="cat.sex === 'female'">Female</p>
+        </div>
+        <div class="col-md-4 mb-5">
+            <h6 class="card-subtitle text-muted">Race</h6>
+            <p class="card-text">{{cat.race}}</p>
+        </div>
+        <div class="col-md-4">
+            <h6 class="card-subtitle text-muted">Dangerous</h6>
+            <i class="fa fa-check text-success" *ngIf="cat.dangerous === true"></i>
+            <i class="fa fa-xmark text-danger" *ngIf="cat.dangerous === false"></i>
+        </div>
+        <div class="col-md-4">
+            <h6 class="card-subtitle text-muted">Adopted</h6>
+            <i class="fa fa-check text-success" *ngIf="cat.adopted === true"></i>
+            <i class="fa fa-xmark text-danger" *ngIf="cat.adopted === false"></i>
+        </div>
+        <div class="col-md-4">
+            <h6 class="card-subtitle text-muted">Meowing level</h6>
+            <p class="card-text" *ngIf="cat.meowingLevel === 1">No meowing</p>
+            <p class="card-text" *ngIf="cat.meowingLevel === 2">Low meowing</p>
+            <p class="card-text" *ngIf="cat.meowingLevel === 3">Average meowing</p>
+            <p class="card-text" *ngIf="cat.meowingLevel === 4">Loud meowing</p>
+        </div>
+      </div>
+      <div class="card-footer text-right">
+        <button id="listBtn" type="button" [routerLink]="['/cats']"
+                class="btn m-1 btn-outline-primary">Cat List
+        </button>
+        <button id="editBtn" type="button" [routerLink]="['edit']"
+                class="btn m-1 btn-outline-success">Edit
+        </button>
+        <button id="deleteBtn" type="button" [routerLink]="['delete']"
+                class="btn m-1 btn-outline-danger">Delete
+        </button>
+      </div>
+    </div>
+  </div>

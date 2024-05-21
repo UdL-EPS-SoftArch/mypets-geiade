@@ -51,7 +51,20 @@ import {ScheduleListComponent} from './schedule/schedule-list/schedule-list.comp
 import {ScheduleSearchComponent} from './schedule/schedule-search/schedule-search.component';
 import {ScheduleCreateComponent} from "./schedule/schedule-create/schedule-create.component";
 import {ScheduleDetailComponent} from "./schedule/schedule-detail/schedule-detail.component";
-
+import { CatListComponent } from './pet/cat/cat-list/cat-list.component';
+import { CatService } from './pet/cat/cat.service';
+import { DogService } from './pet/dog/dog.service';
+import { CatCreateComponent } from './pet/cat/cat-create/cat-create.component';
+import { CatDetailComponent } from './pet/cat/cat-detail/cat-detail.component';
+import { CatEditComponent } from './pet/cat/cat-edit/cat-edit.component';
+import { CatDeleteComponent } from './pet/cat/cat-delete/cat-delete.component';
+import { CatSearchComponent } from './pet/cat/cat-search/cat-search.component';
+import { DogListComponent } from './pet/dog/dog-list/dog-list.component';
+import { DogCreateComponent } from './pet/dog/dog-create/dog-create.component';
+import { DogDetailComponent } from './pet/dog/dog-detail/dog-detail.component';
+import { DogDeleteComponent } from './pet/dog/dog-delete/dog-delete.component';
+import { DogEditComponent } from './pet/dog/dog-edit/dog-edit.component';
+import { DogSearchComponent } from './pet/dog/dog-search/dog-search.component';
 
 @NgModule({
   declarations: [
@@ -88,7 +101,19 @@ import {ScheduleDetailComponent} from "./schedule/schedule-detail/schedule-detai
     ShelterDetailComponent,
     LocationListComponent,
     LocationSearchComponent,
-    LocationCreateComponent
+    LocationCreateComponent,
+    CatListComponent,
+    CatCreateComponent,
+    CatDetailComponent,
+    CatDeleteComponent,
+    CatEditComponent,
+    CatSearchComponent,
+    DogListComponent,
+    DogCreateComponent,
+    DogDetailComponent,
+    DogDeleteComponent,
+    DogEditComponent,
+    DogSearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -108,7 +133,7 @@ import {ScheduleDetailComponent} from "./schedule/schedule-detail/schedule-detai
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
     AuthenticationBasicService, LoggedInGuard, UserService, ScheduleService, ShelterService, LocationService,
-    provideAnimationsAsync()
+    CatService, DogService, provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
