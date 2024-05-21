@@ -34,6 +34,10 @@ import {ShelterCertificateListComponent} from "./shelter-certificate/shelter-cer
 import {ShelterCertificateCreateComponent} from "./shelter-certificate/shelter-certificate-create/shelter-certificate-create.component";
 import {ShelterCertificateDetailComponent} from "./shelter-certificate/shelter-certificate-detail/shelter-certificate-detail.component";
 import {ShelterCertificateDeleteComponent} from "./shelter-certificate/shelter-certificate-delete/shelter-certificate-delete.component";
+import {RoleListComponent} from './role/role-list/role-list.component';
+import {RoleCreateComponent} from './role/role-create/role-create.component';
+import {RoleDeleteComponent} from "./role/role-delete/role-delete.component";
+import {RoleDetailComponent} from "./role/role-detail/role-detail.component";
 import {ShelterService} from "./shelter/shelter.service";
 import {ShelterListComponent} from "./shelter/shelter-list/shelter-list.component";
 import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
@@ -75,6 +79,10 @@ import {ScheduleDetailComponent} from "./schedule/schedule-detail/schedule-detai
     ScheduleSearchComponent,
     ScheduleCreateComponent,
     ScheduleDetailComponent,
+    RoleListComponent,
+    RoleCreateComponent,
+    RoleDeleteComponent,
+    RoleDetailComponent,
     ShelterListComponent,
     ShelterCreateComponent,
     ShelterDetailComponent,

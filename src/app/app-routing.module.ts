@@ -19,6 +19,10 @@ import {ShelterCertificateListComponent} from "./shelter-certificate/shelter-cer
 import {ShelterCertificateCreateComponent} from "./shelter-certificate/shelter-certificate-create/shelter-certificate-create.component";
 import {ShelterCertificateDetailComponent} from "./shelter-certificate/shelter-certificate-detail/shelter-certificate-detail.component";
 import {ShelterCertificateDeleteComponent} from "./shelter-certificate/shelter-certificate-delete/shelter-certificate-delete.component";
+import {RoleListComponent} from "./role/role-list/role-list.component";
+import {RoleCreateComponent} from "./role/role-create/role-create.component"
+import {RoleDeleteComponent} from "./role/role-delete/role-delete.component";
+import {RoleDetailComponent} from "./role/role-detail/role-detail.component";
 import {ShelterCreateComponent} from "./shelter/shelter-create/shelter-create.component";
 import {LocationListComponent} from "./location/location-list/location-list.component";
 import {LocationCreateComponent} from "./location/location-create/location-create.component";
@@ -50,6 +54,10 @@ const routes: Routes = [
   { path: 'schedules', component: ScheduleListComponent, canActivate: [LoggedInGuard]},
   { path: 'schedules/create', component: ScheduleCreateComponent, canActivate: [LoggedInGuard]},
   { path: 'schedules/:id', component: ScheduleDetailComponent, canActivate: [LoggedInGuard]},
+  { path: 'role', component:RoleListComponent },
+  { path: 'role/create', component:RoleCreateComponent },
+  { path: 'role/:id/delete', component:RoleDeleteComponent },
+  { path: 'role/:id', component:RoleDetailComponent },
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full'},
